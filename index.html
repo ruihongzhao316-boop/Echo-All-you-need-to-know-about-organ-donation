@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>organ donation website</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!-- 导航栏 -->
+<header class="navbar">
+  <div class="logo">回响.ECHO</div>
+  <nav class="nav-links">
+    <a href="#home">首页.Home</a>
+    <a href="#intro">开始之前.Introduction</a>
+    <a href="#voice">不同声音.Voice</a>
+    <a href="#article">文章.Article</a>
+    <a href="#interview">采访.Interview</a>
+  </nav>
+  <div class="nav-auth">
+    <a href="#comments" class="btn-secondary">留言.LEAVE A MESSAGE</a>
+  </div>
+</header>
+
+<!-- Main 容器 -->
+<main class="container">
+
+  <!-- SECTION 0: 封面主页.Home -->
+  <section id="home" class="section home-cover">
+    <div class="cover-content">
+      <div class="cover-meta">// PROJECT ECHO // 2026</div>
+      <h1 class="cover-title">回响<span class="dot">.</span>ECHO</h1>
+      <p class="cover-subtitle">一个关于器官捐献、死生边界与社会理性的双语思辨空间</p>
+      <div class="cover-pixel-wrapper">
+        <div class="abstract-pixel-art cover-spec">
+          <div class="dither-overlay"></div>
+        </div>
+      </div>
+      <div class="scroll-hint">
+        <a href="#intro" class="scroll-link">进入空间 . ENTER <span class="arrow">↓</span></a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+
+  <!-- SECTION 1: 开始之前.Introduction -->
+  <section id="intro" class="section hero-section">
+    <div class="hero-content">
+      <span class="tag-accent">// 生命回响.LIFE ECHO</span>
+      <h1>开始之前.Introduction</h1>
+      
+      <div class="tabs-container">
+        <input type="radio" id="tab1" name="intro-tabs" checked>
+        <input type="radio" id="tab2" name="intro-tabs">
+        <input type="radio" id="tab3" name="intro-tabs">
+        
+        <div class="tab-menu">
+          <label for="tab1" class="tab-label">01. 思考与选择 / Reflection</label>
+          <label for="tab2" class="tab-label">02. 流程与原理 / Process</label>
+          <label for="tab3" class="tab-label">03. 登记与权衡 / Registration</label>
+        </div>
+        
+        <div class="tab-content-wrapper">
+          <div class="tab-panel panel-1">
+            <div class="doc-text">
+              <p><strong>这个网站旨在帮助你思考：你是否愿意成为一名器官捐献者。</strong>无论你现在持有什么样的观点，请记住，成为或不成为器官捐献者，都是一个完全个人化且自愿的选择。这个决定应当由你自己做出，没有人有权替你决定，也没有人有权左右你的想法。</p>
+              <p>我们的目标并不是说服你支持或反对器官捐献，而是希望通过提供你可能尚未接触过的信息和观点，帮助你做出更加充分、更加知情的判断。如果你倾向于支持器官捐献，我们也会介绍其中可能存在的风险与争议；如果你倾向于反对器官捐献，我们也会讨论一些常见的误解，以及支持者所关注的价值与理由。</p>
+              <p>无论你非常愿意捐献器官，还是十分排斥这一选择，这都是完全正常且值得被尊重的。重要的不是你最终做出了什么决定，而是这个决定真正出自你自己的思考。没有人应当操控你的选择，我们也不会这样做。</p>
+              <p class="en-doc">This website is designed to help you reflect on whether you want to become an organ donor. Regardless of your current position, please remember that becoming, or not becoming, an organ donor is a deeply personal choice. The decision belongs entirely to you, and no one has the right to make it on your behalf or pressure you into it.</p>
+            </div>
+          </div>
+          
+          <div class="tab-panel panel-2">
+            <div class="doc-text">
+              <p><strong>器官捐献是一种医学流程，指捐献者自愿将健康的器官提供给患有终末期器官功能衰竭的患者。</strong>从科学原理来看，由于时间限制，该流程需要严格的生物学匹配与高效运作。在移植发生前，必须进行 ABO 血型相容性、人类白细胞抗原（HLA）组织分型以及交叉配型等实验室检测，以降低受体免疫排斥的风险。器官一旦离开人体即进入缺血状态，其保存时间极其有限。</p>
+              <p>在中国，逝世后器官捐献的流程受到法定法规的管辖。当医院识别出潜在捐献者后，由独立的医学专家组依据脑死亡或心脏死亡标准判定死亡。在法律层面上，该程序需要取得所有直系亲属（包括父母、配偶和成年子女）一致的书面同意。获得同意后，捐献者的医学参数将被录入中国人体器官分配与共享计算机系统（COTRS），该系统通过自动化计算机算法，根据医疗紧急程度和地理距离等指标向登记的等待者分配器官，排除人为干预。为确保转运速度，国家绿色通道动用了民航和高铁网络。但是，新闻媒体也曾报道过非法器官交易的案例，以及在正式判定死亡前即着手准备移植相关物流的事件，这使得该领域持续受到法规与伦理的审查。</p>
+            </div>
+          </div>
+          
+          <div class="tab-panel panel-3">
+            <div class="doc-text">
+              <p><strong>如何登记成为器官捐献志愿者</strong><br>在中国，人体器官捐献遵循自愿、无偿原则。具有完全民事行为能力的公民可以通过官方渠道登记其身后器官捐献意愿。<br>主要登记方式包括：网络登记、微信登记以及红十字会实体登记。完成登记后，志愿者将获得志愿登记卡，作为捐献意愿登记的凭证。</p>
+              <p><strong>如何撤销或修改登记</strong><br>已登记的志愿者可以随时修改或撤销其捐献意愿。根据中国相关规定，公民享有随时变更或撤销捐献决定的权利。撤销登记后，原有的志愿登记卡和登记证书将失效。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="hero-image-wrapper">
+      <div class="abstract-pixel-art">
+        <div class="crosshair tl">+</div><div class="crosshair tr">+</div><div class="crosshair bl">+</div><div class="crosshair br">+</div>
+        <div class="dither-overlay"></div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- SECTION 2: 不同声音.Voice -->
+  <section id="voice" class="section">
+    <div class="section-header">
+      <span class="section-num">01 /</span>
+      <h2>不同声音.Voice</h2>
+    </div>
+    
+    <div class="full-page-cloud">
+      <div class="dense-heart-cloud">
+        <span class="word-small">注意安全</span>
+        <span class="word-small">带节奏</span>
+        <span class="word-small">证据</span>
+        <span class="word-small">算法</span>
+        
+        <a href="#pane-brain-death" class="word-large size-30">脑死亡</a>
+        
+        <span class="word-small">舆论</span>
+        <span class="word-small">事故</span>
+        
+        <a href="#pane-rumor" class="word-large size-22">谣言</a>
+        
+        <span class="word-small">风险</span>
+        <span class="word-small">勾结</span>
+        
+        <a href="#pane-illegal" class="word-large size-15">非法摘取</a>
+        
+        <span class="word-small">伟大</span>
+        <span class="word-small">安心</span>
+        
+        <a href="#pane-moral" class="word-large size-11">道德绑架</a>
+        
+        <span class="word-small">取消</span>
+        <span class="word-small">细思极恐</span>
+        
+        <a href="#pane-benefit" class="word-large size-10">受益</a>
+        
+        <span class="word-small">性别差异</span>
+        <span class="word-small">恐惧</span>
+        
+        <a href="#pane-altruism" class="word-large size-9">利他</a>
+        
+        <span class="word-small">浪漫</span>
+        <span class="word-small">死亡</span>
+        <span class="word-small">救助</span>
+        <span class="word-small">治安</span>
+      </div>
+    </div>
+    
+    <div class="voice-extended-panes">
+      <!-- 界面 1: 脑死亡 -->
+      <div id="pane-brain-death" class="full-view-pane">
+        <div class="pane-inner">
+          <div class="pane-meta">VOICE PANE // 01 // WEIGHT: 30</div>
+          <h2>脑死亡 <span class="pane-en">/ BRAIN DEATH</span></h2>
+          <div class="content-placeholder">
+            <p class="status-tag">脑死亡也是一个人们经常提及的话题。社交媒体上一部分人认为脑死亡不是真的，而是被可以塑造出来以便摘取器官的。但是，脑死亡的起源其实来自于呼吸机的发明，而不是器官移植：在20世纪五六十年代，呼吸机出现后，有些患者的心脏虽然可以跳动，但是大脑已经不可逆的失去功能，这迫使医生们思考如何定义生与死。而诸多文献也对脑死亡的性质有了明确的定义，即全脑功能永久丧失，没有脑干反射，无法自主呼吸，脑血流停止等等，且目前没有被证实恢复的案例。如果一个人真的脑死亡，医生把呼吸机拔掉后，他无法自行呼吸。这不是医生的主观判断，而是客观生理现象。所以，真正的争议其实不是脑死亡是否属实，而是脑死亡的判定是否公正。即，医生是否完全遵循了脑死亡的判定标准作出了死亡判决，而不是因为需要器官等等其他潜在原因将患者在没有脑死亡的前提下判定为死亡。不可否认的是，器官移植确实会产生利益冲突，所以需要严格程序。因为器官必须在血液循环仍维持时获取，因此社会必须防止过早宣布死亡以及医生为了器官而影响治疗。所以很多国家规定，宣布脑死亡的医生不能参与移植团队，要有多个独立医生判定等等。我国的脑死亡判定医生需要经国家卫健委脑损伤质控评价中心陪许合格后取得相应资格证书，同时脑死亡判定需要2名具有判定资格的一生独立进行判定，首先进行死亡临床判定，再进行脑死亡确认试验，最后进行脑死亡自主呼吸继发试验。这三个步骤均符合脑死亡判定标准的才能确定为脑死亡。这些制度本身就说明，医学界知道存在利益冲突风险，所以试图建立防护机制，确保公正科学的判断。同样，我们无法确保制度的运行一定能约束所有的非法现象，虽然脑死亡是科学的，其诊断是严谨的，如何时间诊断还是存在着潜在风险。所以在面对有关脑死亡的问题时，你也应该保持中立的态度，意识不足，规避风险，对其抱有信任但也不盲从。所以，在考虑是否成为器官捐献者时，做出的最终选择并不重要，重要的是要全面了解所有的信息，排除自己的错误认识，而不是让错误的信息助长无知。</p>
+            <p class="desc-hint">Wijdicks, E. F. (2001). The diagnosis of brain death. New England journal of medicine, 344(16), 1215-1221.</p>
+          </div>
+          <a href="#voice" class="back-to-cloud">↑ 返回词云图.BACK</a>
+        </div>
+      </div>
+
+      <!-- 界面 2: 谣言 -->
+      <div id="pane-rumor" class="full-view-pane">
+        <div class="pane-inner">
+          <div class="pane-meta">VOICE PANE // 02 // WEIGHT: 22</div>
+          <h2>谣言 <span class="pane-en">/ RUMORS</span></h2>
+          <div class="content-placeholder">
+            <p class="status-tag">在如今互联网平台高度发展的社会，人们往往了解器官捐献的渠道往往是网络。而在互联网上手机的声音中，有不少认为社交媒体的算法推荐机制塑造了人们对器官捐献的看法。我们时长能在网上看到医生或者各科室勾结非法摘取器官的新闻，也时常有人在互联网上提及因为注册了器官捐献而意外身亡风险提高的评论。“注册了现在还活着”，“我有一个亲戚…”，“那那个新闻是怎么回事“等等这样的评论层出不穷。不幸的是，作为公民我们无法证实或者证伪这些信息。我们唯一知道的是，作为器官捐献者的确存在潜在风险，但是其中有几成是因为算法导致的信息茧房和被可以操控的“带节奏”行为，又有几成是因为体系的疏漏，我们仍然无法确定。所以，或许对待器官捐献最好的方法就是以乐观的态度看待第三方的信息。如果想要成为捐献者，就要能够面对潜在的风险，同时也不要因为一条匿名发送的评论就全盘否定器官捐献和分配的体系。在面对新的信息时保持冷静，多搜集相关资料以判断其真实性才是当今对待不同来源的信息，做出正确决定的理想方法。</p>
+          </div>
+          <a href="#voice" class="back-to-cloud">↑ 返回词云图.BACK</a>
+        </div>
+      </div>
+
+      <!-- 界面 3: 非法摘取 -->
+      <div id="pane-illegal" class="full-view-pane">
+        <div class="pane-inner">
+          <div class="pane-meta">VOICE PANE // 03 // WEIGHT: 15</div>
+          <h2>非法摘取 <span class="pane-en">/ ILLEGAL PROCUREMENT</span></h2>
+          <div class="content-placeholder">
+            <p class="status-tag">害怕器官非法摘取的本质其实是对器官捐献体系的不信任。但是，中国的器官捐献基于严格的流程。只有在生命不可挽救时，进行严格医学评估，适合捐献则征求亲属同意，如果同意，则会与直系亲属书面确认捐献意愿，再由死亡判定专家按照标准进行死亡判定，以及通过伦理委员会的伦理审查，再通过器官分配与共享计算机系统进行器官分配，最终器官获取医生在器官协调员的见证下实施器官获取。当然，这样的不信任似乎并不能通过介绍体系来打消。因为有太多关于非法摘取或者icu与各科室勾结非法摘取器官的消息流传。可惜的是，没有人能证实这些信息是真的，也没有人能够证实这些消息是假的。人们对非法摘取器官的恐惧，既可能是一种误解，也可能是一种合理的制度性担忧。这种想象并不是凭空产生的，因为器官极其稀缺，可以挽救生命，价值巨大，捐献者处于无法表达意愿的状态。而一个有价值的东西，太可能诱发不道德行为。但是，对制度的合理怀疑，不是阻碍器官捐献，而是推动更透明制度的动力。不过，无端的联想和过度的恐惧是可以被消解的，因为中国的制度保证死亡判断、器官获取和分配之间相互独立，过程可以被监督。没有来由的恐惧只会助长舆流，而不是理性地推动系统的一步步优化。</p>
+          </div>
+          <a href="#voice" class="back-to-cloud">↑ 返回词云图.BACK</a>
+        </div>
+      </div>
+
+      <!-- 界面 4: 道德绑架 -->
+      <div id="pane-moral" class="full-view-pane">
+        <div class="pane-inner">
+          <div class="pane-meta">VOICE PANE // 04 // WEIGHT: 11</div>
+          <h2>道德绑架 <span class="pane-en">/ MORAL COERCION</span></h2>
+          <div class="content-placeholder">
+            <p class="status-tag">大多数有这样想法的人是不愿意被所谓的道德标准规训。捐献器官是高尚的，可是不捐献器官不是不高尚，更不应该被指责。比如说，在器官协调员的工作准则里，很重要的一条就是不可以劝说。他们的工作内容只是提供捐献的选项，以及捐献流程的科普。所以，在器官捐献的体系中确实很少出现道德绑架的现象。大多数这样的声音来自社交媒体，而道德绑架也分正向和反向。有一部分人会将自己对体系的不信任投射到捐献者身上，有人说因为成为了捐献者，被人说事故率上升。还有人试图站在道德高地上劝说人们做出无私的行为。这样的声音大多是情绪化的发泄或挑衅，不管是哪种声音，都不应作为一个人是否选择器官捐献的理由。当做出选择时，请考虑自己希望做什么，而不是他人要求什么。</p>
+          </div>
+          <a href="#voice" class="back-to-cloud">↑ 返回词云图.BACK</a>
+        </div>
+      </div>
+
+      <!-- 界面 5: 受益 -->
+      <div id="pane-benefit" class="full-view-pane">
+        <div class="pane-inner">
+          <div class="pane-meta">VOICE PANE // 05 // WEIGHT: 10</div>
+          <h2>受益 <span class="pane-en">/ BENEFICIARIES</span></h2>
+          <div class="content-placeholder">
+            <p class="status-tag">有人认为器官捐献需要受益，但是大多数情况下这种看法更准确的理解应该是，因为捐献器官是一件帮助他人的事情，所以说捐献器官的家属理应获得相应的“好处“。 事实上，各个国家的器官捐献都遵循“自愿，无偿”的原则。无偿，顾名思义则是的是捐献者和家属不会在捐献后获得任何用“销售商品”所获得的的好处。不过，我国器官捐献的政策确实明确表示在捐献完成后，国家管理中心会向捐献者家属发放1万元慰问金，并会减免急诊救治以及葬礼所需的全部费用。这样的补偿和用钱购买器官的差别在于，发放补助金的主体是国家机关，且补助金不是捐献前中协商的一部分，而是捐献完成后的补偿，这一点与销售的方式不同。有经济学家提出，这样的补偿的本质是在弥补除活体捐献者因捐献而承担的各种经济障碍以及心理费用，比如差旅费，医疗风险，误工，以及焦虑等等情绪。这样的隐形成本是可以用钱来量化并进行补偿的，但是这又与商品化的本质截然不同。如果把这个问题再抽象一些，人们讨论的内容自然是“器官商品化”，而大多数国家大多禁止器官的自由市场买卖。但是，不同学者对这个问题的看法不完全相同。反对器官商品化的主流想法是，当“自愿”交易合法后，贫穷本身就成了一种剥削，富人更多的从穷人手中购买器官，让医疗资源从按需分配一步步走向按购买力分配。而这也会进一步减少原本自愿捐献的器官数量，让原本的帮助性捐献会变成纯粹的金钱交易。不过同时，支持市场化的学者也指出，如果禁止市场导致更多人死亡，这种禁止反反而是不道德的，各个国家每年都有很多人在等待器官移植期间去世。如果市场能够增加供给哪怕20%，也能拯救更多生命。所以说，从这里可以看出，学术界对器官捐献伦理的讨论本身是不一致的，所以当有人在网络上提出器官捐献应该受益的观点也不足为奇了。不过值得注意的是，在中国，器官买卖是违反法律的，或许在将来的某一天相关政策会有不一样的改变，或许人们对伦理和道德又会有不一样的看法。</p>
+            <p class="desc-hint">Lacetera, N., Macis, M., & Stith, S. S. (2014). Removing financial barriers to organ and bone marrow donation: The effect of leave and tax legislation in the US. Journal of health economics, 33, 43-56.</p>
+          </div>
+          <a href="#voice" class="back-to-cloud">↑ 返回词云图.BACK</a>
+        </div>
+      </div>
+
+      <!-- 界面 6: 利他 -->
+      <div id="pane-altruism" class="full-view-pane">
+        <div class="pane-inner">
+          <div class="pane-meta">VOICE PANE // 06 // WEIGHT: 09</div>
+          <h2>利他 <span class="pane-en">/ ALTRUISM</span></h2>
+          <div class="content-placeholder">
+            <p class="status-tag">很明显，人们做出捐献或者不捐献的动机是不同的。有的人会因为遇到了让自己失望的人，选择不捐献；而有的人 because 遇到了善良的人，选择捐献，以此帮助更多的人。人是通过经验学习的，再由经历形成自己的世界观以及认知。但是往往每一个人遇到的人以及经历的事情不足以形成客观的价值观念。这意味着，每一个人，不论选择如何，都可能存在认知偏差，但不一定是恶意的偏见。虽然每一个人的经历是真实的，但由经历得出的推论可能过度扩大了。换个角度想，一个或者几个坏人的存在不能证明所有人都是坏人，一个或几个善良人的存在也不能证明所有人善良。或许你遇到的那个人确实是一个“坏人”，这件事是真的。但是器官捐献面对的不是那一个人，而是一群你还没有遇到的人。每一个人都会被自己的经历限制，如果一个人只看到新闻里的器官犯罪，网络上的冷漠，和自己遇到的坏人，他大概率会认为世界就是这样。但是但如果他接触捐献者家属的故事，接受移植患者的经历，和医护人员的努力，他的样本或许会改变。不过，仍需注意的是，器官捐献不是一种义务，而是一种超义务行为，也就是说，一个人有权根据自己的价值判断身体死后的安排。所以，通过自己经验做出选择的人们也是正确的，只不过需要在选择前意识到自己认知的局限性，从而做出更符合自己想法的决定。</p>
+          </div>
+          <a href="#voice" class="back-to-cloud">↑ 返回词云图.BACK</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- SECTION 3: 文章.Article -->
+  <section id="article" class="section">
+    <div class="section-header">
+      <span class="section-num">02 /</span>
+      <h2>文章.Article</h2>
+    </div>
+
+    <article class="academic-paper">
+      <div class="bilingual-stream">
+        
+        <div class="bi-row">
+          <div class="bi-zh">2024年，中国志愿器官捐献登记人数达701万；然而，实际发生的器官捐献案例仅为6,744例，类似的情况在其他国家同样存在（中国器官移植发展基金会 [COTF]，2025）。诚然，并非所有器官都适合移植且能成功匹配；但登记率与实际捐献率之间的显著差距，在很大程度上也是由于家属的否决。因此，尽管个人生前表达了意愿，但如何处置其遗体似乎取决于生者，而非逝者。这引出了一个关键问题：我们对遗体的关注，究竟是对逝者的关怀，还是对生者的关怀？本文认为，尽管对遗体的处置表面上是在向逝者致敬，但这种关怀在很大程度上是由生者的需求、社会关系和价值观所塑造的。</div>
+          <div class="bi-en">In 2024, 7.01 million people registered for voluntary organ donation in China; however, only 6,744 organ donation cases occurred, and a similar situation occurs in other countries (China Organ Transplantation Development Foundation [COTF], 2025). Granted, not all organs are suitable for transplantation and can be successfully matched; the significant difference between the registration rate and actual donation rate is also largely due to the veto of families. Thus, even though individuals’ wills are declared, how to treat their bodies seems to follow the living, rather than the deceased. This leads to a crucial question: is our concern for the dead body really concern for the dead, or for the living? This essay argues that, despite appearing to honor the deceased, care is largely shaped by the survivors’ needs, connections, and values.</div>
+        </div>
+
+        <div class="bi-row">
+          <div class="bi-zh">动物具有恐惧死亡的生物学本能。这使它们在生存、繁衍以及扩大种群方面具有进化优势。为了生存，所有有机体都发展出了保持内环境稳定性的机制，从而为生命活动和繁殖提供最佳条件（Zhegunov, 2012）。人类作为处于系统发育树顶端的物种，无疑也拥有这种本能。因此，不难发现人类关注死后遗体的一个自然原因：即生前自我保护欲望的延伸与投射。自然而然地，生者往往难以接受想象自己死后被解剖或焚烧，因为这两种方式都破坏了遗体的完整性。</div>
+          <div class="bi-en">Animals have a biological instinct to fear death. This gives them an evolutionary advantage in surviving, reproducing, and thus enlarging their population. To survive, all organisms are developed to preserve the constancy of the internal environment to provide optimal conditions for vital activities and reproduction (Zhegunov, 2012). Humans, a species lying on the top branch of the phylogenetic tree, undoubtedly share this instinct. Therefore, it is not hard to see one natural reason why they care about bodies after death: a projection of the desire for self-preservation that they have when living. Naturally, it tends to be unacceptable for the survivor to imagine how they are dissected or burnt after death, as both approaches disturb the body’s integrity.</div>
+        </div>
+
+        <div class="bi-row">
+          <div class="bi-zh">除了所有物种共有的本能之外，人类关注遗体还有其独特的理由，即管理源于认知冲突的生存焦虑。根据恐惧管理理论（Terror Management Theory），人类对生存的渴望与对自身必死性的认知最终构成了巨大的矛盾，并产生了Greenberg和Arndt（2012）所称的生存恐惧。脆弱的肉体不断提醒着人们生命最终的消亡，在死亡管理中起着至关重要的作用。为了应对这种焦虑，人们会试图通过符合社会价值标准来验证其文化世界观。因此，对遗体的关注是人类用来处理恐惧、并评估个人价值是否与社会价值相一致的一种途径。</div>
+          <div class="bi-en">Besides the shared instinct of all species, humans also have their unique reasons for caring, which is to manage existential anxiety derived from the cognitive conflict. According to the Terror Management Theory, humans’ desire for survival and their knowledge that they will die ultimately create a huge contradiction and generate what Greenberg and Arndt (2012) called existential terror. The vulnerable body constantly reminds people of their ultimate death, playing a vital role in the management of death. To cope with this anxiety, people will try to validate their cultural worldviews by living up to the standards of social value. Thus, caring about the body is an approach humans use to process fear and to evaluate whether their personal worth aligns with societal values.</div>
+        </div>
+
+        <div class="bi-row">
+          <div class="bi-zh">然而，恐惧管理理论的讽刺之处在于，这一旨在解释个人死亡恐惧的理论，最终却揭示了这种恐惧对社会意义框架的依赖：人类倾向于建立自己的价值观，并将其与一个显然是为生者设计的、社会建构的框架相挂钩。即使在预见自己的消亡时，个人也会将这些外部标准内化为最后的心理防线，以确保自己在生者世界中的持久意义。如果个人的临终同意是为了满足社会设定的标准，那么对遗体的关注似乎较少体现对逝者的关怀，而更多表现为生者的需求和价值观。这表明，问题中“我们”这一相关主体不仅指即将死去的个体，也指持续产生和执行死亡阐释框架的幸存者社群。要回答这个问题，不能仅依赖于生物学和心理学概念。因此，本文结合社会学、宗教和法律视角，认为对遗体的关怀最终反映了生者的关切，因为尸体在人类社会中持续发挥着物质、关系和象征客体的功能。</div>
+          <div class="bi-en">However, the irony of Terror Management Theory is that a theory intended to explain individual fear of death ultimately reveals the dependence of that fear on social frameworks of meaning: humans tend to develop their values and align them with a socially constructed frame that is apparently designed for the survivors. Even when anticipating their own demise, individuals internalize these external standards as a final psychological defense to ensure their enduring significance in the world of the living. If individuals' last consents are to meet a standard set by society, concern for the dead body seems to be less as a reflection of care for the deceased and more as an expression of the needs and values of the living. This suggests that the relevant subject of “we” in the question is not only the dying individual, but also the surviving community that continues to produce and enforce the frameworks within which death is interpreted. To answer this question, one cannot rely solely on biological and psychological concepts. This essay, accordingly, incorporating sociological, religious, and legal perspectives, argues that care for the dead body ultimately reflects the concerns of the living, because the corpse continues to function as a material, relational, and symbolic object within human society.</div>
+        </div>
+
+        <div class="bi-row">
+          <div class="bi-zh">身体（或尸体）在很大程度上是社会化的。拉康（Lacan）认为，身体是一个象征性客体，其意义在个人与社会之间不断被协商。由于双方都不对身体拥有绝对的控制权，因此在谁能定义其意义的问题上便产生了冲突。这种紧张关系在前面提到的器官捐献案例中显而易见。即使个人在生前登记成为捐献者，其家属也可能在死后反对捐献，这揭示了在身体应当代表什么的问题上存在着对立的解释。在家属做出决定的同时，器官获取协调员负责引导家属度过悲痛，从而帮助生者适应死亡带来的后果。正如赫茨（Hertz）所论证的，这更加聚焦于死后的身体：由于死亡破坏了社会关系，社群便通过对遗体的管理来发展出恢复社会秩序的实践。特罗耶（Troyer）进一步指出，现代机构通过医疗、技术和法律系统对尸体进行了改造。结果，遗体获得了超出逝者个人身份的含义。回到上述案例：一旦器官被获取，尸体便成为高度受规管的移植网络的一部分。分配系统将器官视为拯救生命的资源，这表明了机构如何重新定义尸体的社会价值。因此，器官捐献的过程表明，对遗体的关怀最终是对生者的关怀。对遗体的关注可能部分是为了逝者的福祉，但更多是为了那些继续活着的人。</div>
+          <div class="bi-en">The body, or the corpse, is largely socialized. Lacan argues that the body is a symbolic object whose meaning is continuously negotiated between individuals and society<sup>i</sup>. Because neither side possesses complete authority over the body, conflicts emerge regarding who can define its significance. This tension is evident in the organ donation case mentioned earlier. Even when individuals register as donors during life, family members may oppose donation after death, revealing competing interpretations of what the body ought to represent. While the families are making decisions, organ procurement coordinators take the responsibility to inform families of the process rather than persuade them, thereby helping survivors adapt to the consequences of death. This, as argued by Hertz<sup>ii</sup>, focuses more on bodies after death: as death disrupts social relationships, communities develop practices that restore social order through the management of the body.Troyer further argues that modern institutions transform the corpse through medical, technological, and legal systems<sup>iii</sup>. As a result, the dead body acquires meanings that extend beyond the identity of the deceased. Back to the case: once organs are recovered, the body becomes part of a highly regulated transplant network. Allocation systems treat organs as life-saving resources, demonstrating how institutions redefine the social value of the corpse. Therefore, the organ donation process demonstrates that care for the dead body is ultimately care for the living. What is cared about the body may partially be the welfare of the deceased; more is for those who remain alive. </div>
+        </div>
+
+        <div class="bi-row">
+          <div class="bi-zh">一旦将尸体理解为一个社会建构的客体，而非仅仅是个体的遗骸，问题就从生者是否关注转向了他们为何关注。死后身体的价值从物质层面延伸到关系层面，并进一步延伸到象征层面。正是这些价值引发了生者对遗体的关怀。正如赫茨（Hertz）所论证的，这更加聚焦于死后的身体：由于死亡破坏了社会关系，社群便通过对遗体的管理来发展出恢复社会秩序的实践。</div>
+          <div class="bi-en">Once the corpse is understood as a socially constituted object rather than merely the remains of an individual, the question shifts from whether survivors care to why they care. The value of bodies after death spread from material to relational, and further to symbolic. It is these values that induce care for the body by the survivors.</div>
+        </div>
+
+        <div class="bi-row">
+          <div class="bi-zh">当身体被社会化时，它们被视为可以管理和利用的物质。这是因为考虑到尸体的效用与风险，它们能够显著重塑社会结构。为了通过提升公共卫生来维持结构稳定，社会必须关注并管理遗体。一方面，社会从身体中提取生产价值；另一方面，社会着手消除其潜在威胁。例如，在医学培训体系中，尸体充当了教学资源。医学院依赖捐献的遗体来培养未来的医生。通过解剖，尸体被转化为教学材料，其价值在于产出医学知识和专业技能。</div>
+          <div class="bi-en">When bodies are socialized, they are treated as materials that could be managed and utilized. This is because corpses could significantly reshape the social structure, considering their utilities and risks. To maintain the structural stability through enhancing public health, society must care for and manage bodies. On one hand, society extracts productive value from the body; on the other hand, they proceed to neutralize its threat. For instance, the corpse serves as an educational resource in the medical training system. Medical schools rely on donated cadavers to train future physicians. Through anatomical dissection, the corpse is transformed into a teaching material whose value lies in producing medical knowledge and professional expertise.</div>
+        </div>
+
+        <div class="bi-row">
+          <div class="bi-zh">此外，当尸体对集体生存构成物质风险时，社会的关注同样会被动员起来。虽然为了确保生者的安全必须对传染病进行管理，但研究人员认识到，在西非埃博拉疫情和新冠（COVID-19）大流行中，缺乏有效沟通会导致遗体失踪或被迫秘密下葬（Suwalowska et al., 2021）。这一发现表明，在公共卫生危机期间，尸体越来越多地被理解为集体保护和生物安全中的物质客体。在这种语境下，社会的关注转向了维护公共稳定，这有时可能会限制个人意愿的维持程度。因此，对遗体的严格规管反映了对尸体的高度关注，因为它持续影响着生者的安全。</div>
+          <div class="bi-en">Besides, societal care is equally mobilized when the corpse poses a material risk to the collective survival. While the contagion should be managed to ensure the safety of the living, researchers recognized that the lack of effective communication will lead to the disappearance of the bodies or forced secret burials in the West African Ebola epidemic and the COVID-19 pandemic (Suwalowska et al., 2021). This finding suggests that during public health crises, the corpse is increasingly understood as a material object within collective protection and biosecurity. In such contexts, social concern shifts toward the preservation of public stability, which may at times limit the extent to which individual wishes can be maintained. The rigorous regulation of dead bodies, therefore, reflects the intense care of corpses because it continues to affect survivors’ safety.</div>
+        </div>
+
+        <div class="bi-row">
+          <div class="bi-zh">生者关注遗体还因为其承载着社会关系。当一个个体去世时，死亡剧烈地破坏了既有的社会网络。因此，对尸体进行的仪式化处理旨在从情感和法律两个层面上重新锚定生者。尽管葬礼——与死亡相关的最重要仪式之一——通常被视为对死者的纪念，但它对生者可能意义更为重大。研究表明，人类的仪式能够将丧亲经历语境化，为丧亲家庭提供融入文化的支持以及对死亡的共同理解（de Souza & de Souza, 2019）。这一发现表明，以纪念死者为名的仪式，实际上也起到了必要的心理缓冲作用，愈合了生者的创伤性伤口。</div>
+          <div class="bi-en">Survivors care about the body also because it carries social relationships. When an individual passes away, death violently disrupts the social network. Consequently, the ritualistic processing of the corpse is designed to re-anchor the survivors on both an emotional level and a legal level. Though the funeral, one of the most significant rituals related to death, is usually viewed as a memorial to the dead, it may mean more to survivors. Studies show that human rituals allow the contextualization of the lost experience, offering the bereaved family the support to be part of the culture and a shared understanding of death (de Souza & de Souza, 2019). This finding suggests that the rituals, under the name of memorizing the death, also act as a necessary emotional buffer that heals the traumatic wounds of the survivors.</div>
+        </div>
+
+        <div class="bi-row">
+          <div class="bi-zh">与缓解悲痛平行的是生者法律地位的稳定，死亡在此同样引发了既有社会关系的重组。有趣的是，许多国家都有类似的法律条款，规定个人死亡后某些法律关系宣告结束，体制纽带也必须重新定义。例如，在《中华人民共和国民法典》（2020）中，第51条宣告夫妻关系自宣告死亡之日起正式终止。这证明了社会关系是如何锚定在活体之上的，因为当肉体变成尸体时，法律关系也随之结束。因此，对遗体的关注部分是由于死亡重构了既有的社会关系。</div>
+          <div class="bi-en">Parallel to relieving grief is the stabilization of the survivors' legal statuses, where death also initiates the reorganization of existing social relationships. Interestingly, many countries have similar articles of law that stipulate the end of certain legal relationships after individuals die, and institutional ties must also be redefined. For instance, in the Civil Code of the People's Republic of China (2020), Article 51 declares that the marital relationship officially terminates on the date an individual is legally pronounced dead. This demonstrates how social relationships are anchored to the living body, as when a body turns into a corpse, the legal relationship ends accordingly. Thus, concern for the dead body partly emerges because death restructures existing social relationships.</div>
+        </div>
+
+        <div class="bi-row">
+          <div class="bi-zh">此外，生者关注遗体还因为它是社会价值的象征。在这种象征维度内，遗骸被视为共享的理想，为生者提供道德和精神上的指引。在世俗领域中，丧葬仪式中的人类遗骸是宝贵的象征资本，常被国家用来重构集体记忆和重新协商国家认同（Verdery, 1999）。该理论表明，某些特定人物（如政治领袖）的遗骸作为核心象征物，生者可向其投射具有可塑性的历史叙事。</div>
+          <div class="bi-en">Furthermore, survivors care about the body because it serves as a symbol of social value. Within this symbolic dimension, the physical remains are viewed as shared ideals, providing moral and spiritual guidance for the living. In a secular field, human remains in funerary rituals are valuable symbolic capital, which is often deployed by nations to restructure collective memory and renegotiate national identity (Verdery, 1999). This theory suggests that the physical remains of certain people, such as political leaders, serve as vital symbols onto which the survivors project malleable historical narratives.</div>
+        </div>
+
+        <div class="bi-row">
+          <div class="bi-zh">例如，1956年匈牙利革命的领导人纳吉·伊姆雷（Imre Nagy）曾被社会主义政府处决并秘密掩埋，其遗骸于1989年被找到并获得了隆重的国葬。这一高度公开的仪式将他的遗体转化为国家抵抗和匈牙利自豪感复兴的强有力象征，完美地阐释了身体如何成为政治斗争中的关键参与者。从这个意义上说，对尸体的管理发挥了政治进程的功能，国家借此在政治崩塌后蓄意重建社会意义。因此，这种仪式化的关怀使生者能够将领导人逝世所带来的混乱，转化为井然有序的结构和国家统一的叙事。</div>
+          <div class="bi-en">For instance, Imre Nagy, the leader of the 1956 Hungarian Revolution, executed and secretly buried by the socialist government, was found and given a grand state funeral in 1989. This highly public ceremony transformed his body into a powerful mark of national resistance and the revival of Hungarian pride, perfectly illustrating how bodies become key players in political struggles. In this sense, the management of corpse functions as a political process through which the state intentionally rebuilds social meaning after political collapse. Therefore, this ritualized care enabled the survivors to transform the chaos brought about by the death of a leader into a well-structured order and the narrative of national unity.</div>
+        </div>
+
+        <div class="bi-row">
+          <div class="bi-zh">此外，在宗教中，圣人的遗体被赋予了精神领域，身体被视为拥有神圣力量的媒介。在基督教中，圣徒的骨骸（圣物）得以保存，是基于人们深信它们能够圣化与之接触的人（Brown, 1981）。同样，在佛教中，结晶状的舍利（śarīra）受到修行者的深切尊崇，被视为能够净化心灵的觉悟之物质痕迹（Strong, 2004）。在伊斯兰传统中，先知穆罕默德遗骸的保存则归因于该身体所具有的福祉与神圣庇护（Wheeler, 2006）。在这三个实例中，教会和神职人员赋予了身体以宗教意义。信徒因此开始关注遗体，因为这不仅关乎逝去的圣人，更是一种精神追求，信徒最终借此获得救赎，使自己免受痛苦和凡人局限性的束缚。</div>
+          <div class="bi-en">In addition, in religion, the corpse of a saint is given a spiritual realm, where the body is regarded as a medium possessing divine power. In Christianity, the bones of saints (relics) are preserved under the conviction that they would sanctify the people who encounter them (Brown, 1981). Similarly, in Buddhism, the crystalline relics (śarīra) are deeply revered by practitioners as physical traces of enlightenment that purify minds (Strong, 2004). In Islamic traditions, the preservation of the remains of the Prophet Muhammad is due to the blessing and divine protection the body possesses (Wheeler, 2006). In these three instances, bodies are rendered with religious meanings by churches and priests. The believers thus start to care about the body because it is more than the saint who dies, but a spiritual pursuit by which they, ultimately, achieve redemption to free themselves from suffering and mortal limitations.</div>
+        </div>
+
+        <div class="bi-row">
+          <div class="bi-zh">反对意见假定相关问题在于个人为何在死前关注自己的身体。然而，这种解释无法回答为何遗体在死后依然重要。事实上，死亡将身体从个人财产转化为了嵌入社会网络中的客体。一旦这种转变发生，尸体的意义便无法再仅通过逝者的偏好来解释。尽管个人可能会表达关于土葬、火葬或器官捐献的意愿，但尸体是通过生者和机构的行动来获得其实际与象征意义的。因此，对死后关怀的阐述必须主要聚焦于那些在死后继续与遗体发生互动的人，而非那些无法再参与这些社会进程的人。</div>
+          <div class="bi-en">The objection assumes that the relevant question is why individuals care about their own bodies before death. However, such an explanation fails to answer why bodies continue to matter after death. In fact, death transforms the body from a personal possession into an object embedded in social networks. Once this transition occurs, the significance of the corpse can no longer be explained solely through the preferences of the deceased. Although individuals may express wishes regarding burial, cremation, or organ donation, the corpse acquires its practical and symbolic meaning through the actions of survivors and institutions. Therefore, an account of post-mortem care must focus primarily on those who continue to interact with the body after death rather than on those who can no longer participate in these social processes.</div>
+        </div>
+
+        <div class="bi-row">
+          <div class="bi-zh">虽然社会分担的关怀旨在保护公共卫生、保留集体记忆或给生者以情感支持，但它也存在着将权威从逝者身上剥离的风险。尽管个人与生者的意愿都很重要，但最终决定如何处置眼前尸体的却是后者。这为未来的研究留下了一个更广泛的伦理问题：应当主要将逝者理解为应当持续尊重其意愿的自主个体，还是将其理解为身体不可避免地成为身后社会世界一部分的关系存在？如果后者属实，那么在司法案件中记录的、重症监护室（ICU）部门勾结利用并贩卖器官而违背个人生前明确表达的意愿的案例，也就不足为奇了。</div>
+          <div class="bi-en">While socially distributed care aims to protect public health, preserve collective memory, or support survivors emotionally, it also risks shifting authority away from the deceased. Although both individuals’ and survivors’ will matter, it is the latter who gets to decide how to treat the corpse at hand. This leaves a broader ethical question for future research: should the dead be understood primarily as autonomous individuals whose wishes should continue to be respected, or as relational beings whose bodies inevitably become part of the social world left behind? If the latter is true, it becomes less surprising that instances of ICU departments colluding to exploit and traffic organs, against the prior, explicitly stated will of individuals, are recorded in judicial cases<sup>iv</sup>.</div>
+        </div>
+
+      </div>
+
+      <!-- 脚注区域.FOOTNOTES -->
+      <div class="paper-footnotes">
+        <hr class="footnote-line">
+        
+        <!-- 脚注 i -->
+        <div class="footnote-item">
+          <sup>i</sup>
+          <div class="fn-zh">雅克·拉康将身体划分为想象态（Corps imaginaire）、象征态（Corps symbolique）和实在态（Corps réel）。想象态涉及身体的自我形象，象征态涉及通过语言和社会结构产生的意义，而实在态则是指抗拒完全符号化的物质身体。三者的互动揭示了身体意义是如何被不断协商而成的，而非天然赋予的（转引自 Soto, 2017）。</div>
+          <div class="fn-en">Jacques Lacan categorized the body as <i>imaginary</i> (Corps imaginaire), <i>symbolic</i> (Corps symbolique), and <i>real</i> (Corps réel). The Imaginary concerns bodily self-image, the Symbolic concerns meaning produced through language and social structures, and the Real refers to the material body that resists complete symbolization. Their interaction reveals how bodily meaning is continuously negotiated rather than naturally given (as cited in Soto, 2017).</div>
+        </div>
+        
+        <!-- 脚注 ii -->
+        <div class="footnote-item">
+          <sup>ii</sup>
+          <div class="fn-zh">罗伯特·赫茨（1907/2009）认为，死亡同时是一个生物学事件和社会学事件。由于死亡破坏了社会关系和集体秩序，因此丧葬实践起到了应对这种破坏并促进社会重新整合的作用。</div>
+          <div class="fn-en">Robert Hertz (1907/2009) argues that death is simultaneously a biological and social event. Because death disrupts social relationships and collective order, funerary practices serve to manage this disruption and facilitate social reintegration.</div>
+        </div>
+        
+        <!-- 脚注 iii -->
+        <div class="footnote-item">
+          <sup>iii</sup>
+          <div class="fn-zh">在《人类尸体技术》（Technologies of the Human Corpse）一书中，约翰·特罗耶（2020）考察了现代医疗、法律和丧葬技术如何改变尸体的地位。身体不再仅仅是人类遗骸，而是成为了制度化分类、规管和利用的客体。</div>
+          <div class="fn-en">In the book <i>Technologies of the Human Corpse</i>, John Troyer (2020) examines how contemporary medical, legal, and funerary technologies transform the status of the corpse. Rather than remaining merely human remains, the body becomes subject to institutional classification, regulation, and utilization.</div>
+        </div>
+        
+        <!-- 脚注 iv -->
+        <div class="footnote-item">
+          <sup>iv</sup>
+          <div class="fn-zh">关于此类违反伦理准则的典型现实案例，参见中国安徽臭名昭著的2018年“怀远非法器官摘除案”。在此次丑闻中，包括当地医院ICU主任及数名器官获取组织（OPO）医生在内的六名人员串通作案，绕过了官方的中国器官分配与共享计算机系统（COTRS）。他们通过伪造捐献同意书，在改装的救护车内对11名已故患者的器官进行了非法摘除并用于黑市销售。犯罪分子最终于2020年被定罪并判刑。</div>
+          <div class="fn-en">For a prominent real-world case of this ethical breach, see the infamous 2018 "Huaiyuan Illegal Organ Harvesting Case" in Anhui, China. In this scandal, six individuals, including a local hospital’s ICU director and several organ procurement organization (OPO) doctors, colluded to bypass the official China Organ Transplant Response System (COTRS). They forged donation consent forms to illegally harvest organs from 11 deceased patients inside a modified ambulance for black-market sale. The perpetrators were eventually convicted and sentenced in 2020.</div>
+        </div>
+      </div>
+      <!-- 参考文献.REFERENCES -->
+      <div class="paper-references">
+        <h3 class="ref-title">References</h3>
+        <ul class="ref-list">
+          <li>Asan, A. (2024). Bacterial diversity of the corpses. <i>European Journal of Biology</i>, 83(1), 106-116.</li>
+          <li>Brown, P. (2014). <i>The cult of the saints: its rise and function in Latin Christianity</i>. University of Chicago Press.</li>
+          <li>de Souza, C. P., & de Souza, A. M. (2019). Funeral Rituals in The Process of Mourning: Meaning and Functions/Rituais Funebres no Processo do Luto: Significados e Funcoes. <i>Psicologia: Teoria e Pesquisa</i>, 35.</li>
+          <li>Greenberg, J., & Arndt, J. (2012). Terror management theory. <i>Handbook of theories of social psychology</i>, 1, 398-415.</li>
+          <li>Hertz, R. (2009). <i>A Contribution to the Study of the Collective Representation of Death</i>.</li>
+          <li>Hick, J. (1989). <i>An interpretation of religion: Human responses to the transcendent</i> (Vol. 20050201). New Haven: Yale University Press.</li>
+          <li>National People's Congress. (2020). <i>Civil code of the People's Republic of China [Zhonghua renmin gongheguo minfadian]</i> (passed May 28, 2020, effective Jan. 1, 2021).</li>
+          <li>China Organ Transplantation Development Foundation (COTF) (2025). <i>China organ donation and transplantation development report (2024)</i>.</li>
+          <li>Soto, F. C. (2017). El cuerpo más allá del organismo: el estatus del cuerpo en el psicoanálisis lacaniano. <i>Contrastes: revista internacional de filosofía</i>, 22(2), 1-22.</li>
+          <li>Strong, J. (2004). <i>Relics of the Buddha</i> (Vol. 7). Princeton University Press.</li>
+          <li>Suwalowska, H., Amara, F., Roberts, N., & Kingori, P. (2021). Ethical and sociocultural challenges in managing dead bodies during epidemics and natural disasters. <i>BMJ global health</i>, 6(11).</li>
+          <li>Troyer, J. (2020). <i>Technologies of the human corpse</i>. MIT Press.</li>
+          <li>Verdery, K. (1999). <i>The political lives of dead bodies: Reburial and postsocialist change</i>. Columbia University Press.</li>
+          <li>Wheeler, B. (2006). <i>Mecca and Eden: ritual, relics, and territory in Islam</i>. University of Chicago Press.</li>
+          <li>Zhegunov, G. (2012). Homeostasis and the Maintenance of Integrity. In <i>The Dual Nature of Life: Interplay of the Individual and the Genome</i> (pp. 113-122). Berlin, Heidelberg: Springer Berlin Heidelberg.</li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <hr class="section-divider">
+
+ <!-- SECTION 4: 采访.Interview -->
+<section id="interview" class="section">
+  <div class="container"> <!-- 记得包裹 container 确保整体不吃满屏幕边缘 -->
+    <div class="section-header">
+      <span class="section-num">03 /</span>
+      <h2>采访.Interview</h2>
+    </div>
+    
+    <!-- 采访的具体交互流内容 -->
+    <div class="interview-stream">
+
+      <!-- ==================== 受访者 1 ==================== -->
+      <div class="interview-block">
+        <h3 class="interviewer-title">// 受访者 1：管理层 / RESPONDENT 1: MANAGEMENT</h3>
+        
+        <!-- 一、关于器官捐献的基本情况 -->
+        <div class="bi-interview-row">
+          <div class="bi-zh">
+            <h4>一、关于器官捐献的基本情况</h4>
+            <p>1. 登记和捐献的差距<br>
+            受访者澄清了“登记人数”与“实际捐献人数”之间无直接对应关系的常见误解。截至近年，中国器官捐献意愿登记已达 700 多万人，但每年实际完成的捐献案例约为 6000 多例。主要原因在于两者属于完全不同的群体：<br>
+            · 意愿登记者主要为表达未来捐献意愿的健康人群；<br>
+            · 实际捐献者则必须是因意外或疾病去世、且符合严格医学条件的患者。</p>
+            <p>2. 评估我国器官捐献率的现状与国际定位<br>
+            从国际总量来看，中国器官捐献总量位居世界第二（仅次于美国）。但若以“每百万人口捐献率（PMP）”计算，中国约为 4.9，而西班牙、美国等国家约为 50。尽管存在约 10 倍的率值差距，但整体仍处于全球中上水平。（注：经数据核实，中国当前百万人口捐献率在全球排名约为第 51名）。</p>
+          </div> <!-- 【修正】闭合 bi-zh -->
+          <div class="bi-en">
+            <h4>I. Overview of Organ Donation</h4>
+            <p>1. Discrepancy Between Registration and Actual Donation<br>
+            The respondent clarified the common misunderstanding regarding the relationship between the number of registered donors and actual donations. While organ donation registrations in China have reached over 7 million in recent years, the number of completed donations remains around 6,000 annually. The primary reason is that these two numbers represent entirely different cohorts:<br>
+            · Registered individuals are primarily healthy people expressing a willingness for future donation;<br>
+            · Actual donors must be individuals who pass away due to accidents or diseases and strictly meet specific medical criteria.</p>
+            <p>2. Current Status and Global Ranking of China's Organ Donation Rate<br>
+            In terms of absolute volume, China ranks second globally in total organ donations, trailing only the United States. However, when calculated by the Patients Per Million (PMP) metric, China's rate stands at approximately 4.9, compared to around 50 in countries like Spain and the United States. Despite this tenfold statistical gap, the overall rate remains at an upper-middle level globally. (Note: Data verification indicates that China's current PMP ranks approximately 51st globally).</p>
+          </div>
+        </div>
+
+        <!-- 二、器官捐献协调员的角色与工作流程 -->
+        <div class="bi-interview-row">
+          <div class="bi-zh">
+            <h4>二、器官捐献协调员的角色与工作流程</h4>
+            <p>器官捐献协调员是 2010 年后逐步建立的专业岗位，目前全国从业人员约 2700 人，主要由医护人员、红十字会工作人员及社会工作者构成。其核心工作流程包括：<br>
+            · 潜在捐献者识别：于医院内寻找危重症患者，评估是否满足生命无法挽救（如脑死亡）且器官具备可用性的医学条件；<br>
+            · 初步沟通：查询患者生前是否有登记意愿，并向家属阐述捐献相关信息，严格遵循不强迫、不诱导原则，以政策解释与知识普及为主；<br>
+            · 死亡判定：严格执行脑死亡与心死亡的双重判定程序，确认无误后方可进入后续环节；<br>
+            · 家属共同决策：即使患者本人生前已做登记，实际操作中仍需征得父母、配偶、成年子女等直系家属的共同签字同意；<br>
+            · 伦理审查：重点审查捐献是否完全基于自愿原则，确保无任何利益交换或商业买卖行为；<br>
+            · 器官分配与获取：完全依托国家器官分配系统进行自动化匹配与依法获取；<br>
+            · 人文关怀与善后：组织集体默哀致敬、修复捐献者遗体仪容、协助家属举办告别仪式，并负责信息记录上报及后续纪念园祭扫等关怀活动。</p>
+          </div> <!-- 【修正】闭合 bi-zh -->
+          <div class="bi-en">
+            <h4>II. Roles and Workflow of Organ Procurement Coordinators</h4>
+            <p>Organ procurement coordinators constitute a professional role gradually established since 2010. Currently, there are approximately 2,700 practitioners nationwide, primarily consisting of medical professionals, Red Cross staff, and social workers. The core operational workflow includes:<br>
+            · Identification of Potential Donors: Monitoring critically ill patients within hospitals to assess whether they meet the medical criteria where life cannot be sustained (e.g., brain death) and their organs remain viable;<br>
+            · Initial Communication: Verifying whether the patient had registered prior donor intent, and explaining donation-related information to the family. This process strictly adheres to principles of non-coercion and non-inducement, focusing solely on policy explanation and public education;<br>
+            · Determination of Death: Strictly executing the dual verification protocols for both brain death and cardiac death before proceeding to subsequent stages;<br>
+            · Joint Family Decision-making: Even if the patient had registered prior intent, actual operations require the joint signatures and consent of immediate family members, including parents, spouses, and adult children;<br>
+            · Ethical Review: Focusing on verifying that the donation is entirely voluntary and ensuring the absence of any commercial transactions or exchange of interests;<br>
+            · Organ Allocation and Procurement: Relying entirely on the national organ allocation system for automated matching and legally compliant procurement;<br>
+            · Humanitarian Care and Post-mortem Management: Organizing collective moments of silence, restoring the donor's physical appearance, assisting families with memorial services, managing records, and organizing subsequent commemorative events at memorial parks.</p>
+          </div>
+        </div>
+
+        <!-- 三、关于是否劝捐的原则 -->
+        <div class="bi-interview-row">
+          <div class="bi-zh">
+            <h4>三、关于是否劝捐的原则</h4>
+            <p>在执业过程中，协调员禁止进行 any 形式的劝说或诱导，其职责仅限于解释相关政策与提供基础信息，保障家属的自主决定权。在具体实务中，若家属明确表示拒绝，协调员将立即终止流程；仅在家属表达出了解意愿时，才会进一步说明。整个机制严格建立在自愿、无偿及无利益诱导的基础之上。</p>
+          </div> <!-- 【修正】闭合 bi-zh -->
+          <div class="bi-en">
+            <h4>III. Principles Regarding Persuasion and Solicitation</h4>
+            <p>Coordinators are strictly prohibited from engaging in any form of persuasion or inducement during their practice. Their responsibilities are limited to explaining relevant policies and providing foundational information, thereby safeguarding the family's autonomy in decision-making. In practice, if the family explicitly declines, the coordinator terminates the process immediately; further explanation is provided only when the family expresses a willingness to learn more. The entire mechanism is strictly built upon the principles of voluntary, uncompensated, and non-induced participation.</p>
+          </div>
+        </div>
+
+        <!-- 四、制度规范与现实操作之间的张力 -->
+        <div class="bi-interview-row">
+          <div class="bi-zh">
+            <h4>四、制度规范与现实操作之间的张力</h4>
+            <p>1. 家属知情同意的必要性<br>
+            即便受访者本人生前表达了捐献意愿，去世后的身体处置权与伦理权益仍归属于其家庭，因此必须获得家属的知情同意。受访者指出，目前全球范围内基本没有国家能够真正绕开家属共识而直接执行器官获取。<br>
+            2. “推定同意”理念与现实的差异<br>
+            尽管部分理论探讨提及“推定同意”机制（即未明确反对视为默认同意），但在国内的医疗实务中，必须严格执行家属的“明确同意”制度。（注：依据现行法规，中国器官捐献在法律与实务层面均实行“明确同意”制，而非推定同意）。<br>
+            3. 捐献率受限的深层原因<br>
+            我国器官捐献体系起步相对较晚（自 2010 年起逐步建立），目前仍受到医疗资源分布不均、传统文化观念制约以及社会整体认知尚处于转型期等多重因素的影响。</p>
+          </div> <!-- 【修正】闭合 bi-zh -->
+          <div class="bi-en">
+            <h4>IV. Tensions Between Institutional Norms and Real-world Operations</h4>
+            <p>1. Necessity of Informed Consent from Family Members<br>
+            Even if individuals express donation intent during their lifetime, the rights regarding post-mortem body management and ethical consensus remain with their families. Consequently, informed consent from family members is mandatory. The respondent noted that globally, almost no jurisdiction can bypass family consensus to execute organ procurement;<br>
+            2. Divergence Between "Presumed Consent" Concept and Current Reality<br>
+            Although theoretical discussions exist regarding "presumed consent" mechanisms (where the absence of explicit objection defaults to consent), medical practice in China strictly enforces an "explicit consent" system. (Note: Under current regulations, China's organ donation operates on an explicit consent basis in both legal framework and practical application, rather than presumed consent);<br>
+            3. Underlying Factors Limiting Donation Rates<br>
+            China's organ donation system developed relatively recently, beginning its gradual establishment in 2010. Currently, it remains constrained by multiple factors, including the uneven distribution of medical resources, traditional cultural concepts regarding the body, and the transitional phase of public awareness.</p>
+          </div>
+        </div>
+
+        <!-- 五、社会观念与个体选择的博弈 -->
+        <div class="bi-interview-row">
+          <div class="bi-zh">
+            <h4>五、社会观念与个体选择的博弈</h4>
+            <p>针对部分家庭在捐献后选择隐瞒经历的现象，受访者将其归纳为三点现实阻力：<br>
+            · 担忧受到社会舆论关于“对亲人遗体不够残忍/不孝”的道德苛责；<br>
+            · 害怕被外界误解或怀疑存在地下“利益交换”；<br>
+            · 社会对器官捐献的整体认同尚未凝聚为绝对共识，个体的理性选择容易受到外界熟人环境的压力制约。<br>
+            受访者认为，推动社会观念演进的核心路径依赖于法律与制度的完善、持久的生命教育宣传，以及正面真实案例的传播。这是一个渐进式的社会改良过程，而非短期内可以通过行政手段强力推动的结果。</p>
+          </div> <!-- 【修正】闭合 bi-zh -->
+          <div class="bi-en">
+            <h4>V. The Tension Between Societal Norms and Individual Choices</h4>
+            <p>Regarding the phenomenon where some families choose to conceal their donation experience, the respondent identified three primary practical obstacles:<br>
+            · Concerns over facing moral criticism from public opinion regarding perceived disrespect or lack of filial piety toward the deceased's body;<br>
+            · Apprehension about being misunderstood or suspected of participating in illicit "exchanges of interest";<br>
+            · The lack of an absolute societal consensus on organ donation, which subjects individual rational choices to pressures from their immediate social environments.<br>
+            The respondent stated that shifting societal perceptions depends fundamentally on the refinement of laws and institutions, sustained life and death education, and the dissemination of authentic positive cases. This represents a gradual process of social reform rather than an outcome that can be forced through short-term administrative measures.</p>
+          </div>
+        </div>
+
+        <!-- 六、从业者的个人理解与价值反思 -->
+        <div class="bi-interview-row">
+          <div class="bi-zh">
+            <h4>六、从业者的个人理解与价值反思</h4>
+            <p>受访者强调，器官捐献已超越了单纯的医学技术范畴，它是现代社会中人生观、价值观与生死观的综合映射。他将该项事业的宏观意义概括为“利国、利民、利己、利他”的多赢格局：<br>
+            · 利国：有效推动临床医学与现代科学的发展；<br>
+            · 利民：直接挽救或改善重症患者的生命质量；<br>
+            · 利己：通过生命延续的意象，在一定程度上缓解失亲家庭的创伤与悲痛；<br>
+            · 利他：在人道的框架下实现纯粹的生命救助。<br>
+            在从业者看来，利他与利己并不存在天然的对立，个体的善举在帮助他人的同时亦能达成自我价值的实现，并在全社会形成正向的道德反馈。</p>
+          </div> <!-- 【修正】闭合 bi-zh -->
+          <div class="bi-en">
+            <h4>VI. Practitioners' Personal Comprehension and Values Reflection</h4>
+            <p>The respondent emphasized that organ donation transcends purely medical technology, serving as a comprehensive reflection of views on life, value systems, and death within modern society. He summarized the macro-level significance of this field into a mutually beneficial framework that serves national development, public interest, personal closure, and altruism:<br>
+            · National Development: Effectively advancing clinical medicine and modern scientific research;<br>
+            · Public Interest: Directly saving lives or improving the quality of life for critically ill patients;<br>
+            · Personal Closure: Alleviating the trauma and grief of bereaved families to an extent through the concept of life continuation;<br>
+            · Altruism: Realizing pure life-saving assistance within a humanitarian framework.<br>
+            From the practitioner's perspective, altruism and self-interest are not inherently antithetical. Individual acts of goodwill achieve self-actualization while assisting others, generating a positive moral feedback loop across society.</p>
+          </div>
+        </div>
+
+        <!-- 七、信任机制与制度保障 -->
+        <div class="bi-interview-row">
+          <div class="bi-zh">
+            <h4>七、信任机制与制度保障</h4>
+            <p>针对社会公众关于“医疗机构是否可能为了获取器官而提前判定死亡”的信任顾虑，受访者指出，我国从制度设计上已筑牢防线：实施死亡判定专家组与器官移植团队的绝对分离机制，配备严苛的法律规范与多方社会监督。其首要核心原则永远是优先且无条件地保障患者的生命权。</p>
+          </div> <!-- 【修正】闭合 bi-zh -->
+          <div class="bi-en">
+            <h4>VII. Trust Mechanisms and Institutional Safeguards</h4>
+            <p>Addressing public concerns regarding whether medical institutions might prematurely declare death to procure organs, the respondent pointed out that China's institutional design has established clear safeguards. This includes the absolute separation between death determination expert panels and organ transplantation teams, alongside stringent legal regulations and multi-party social supervision. The primary and unconditional core principle remains the preservation of the patient's right to life.</p>
+          </div>
+        </div>
+
+        <!-- 八、关于生命观的延伸探讨 -->
+        <div class="bi-interview-row">
+          <div class="bi-zh">
+            <h4>八、关于生命观的延伸探讨</h4>
+            <p>受访者指出：“器官捐献的核心命题并非关乎死亡，而是旨在让人更好地活着。”通过理性审视死亡的不可避免性，反而能够促使社会个体更清晰地认知生活的本意，在理解生命有限性的同时更加珍视当下的存在。</p>
+          </div> <!-- 【修正】闭合 bi-zh -->
+          <div class="bi-en">
+            <h4>VIII. Extended Discussion on Views of Life</h4>
+            <p>The respondent noted: "The core thesis of organ donation is not about death, but rather about enabling individuals to live better." Rationally acknowledging the inevitability of death encourages individuals to clarify the meaning of life, prompting them to value current existence while understanding its finite nature.</p>
+          </div>
+        </div>
+
+        <!-- 九、青年群体与生命教育的现状 -->
+        <div class="bi-interview-row">
+          <div class="bi-zh">
+            <h4>九、青年群体与生命教育的现状</h4>
+            <p>宏观数据显示，目前 18 至 25 岁的青年群体在器官捐献意愿登记中占据了较高的比例（约 40%）。然而在微观家庭中，部分家长仍对此持保留或反对态度，担忧年轻人过早触碰生死议题。受访者认为，系统性的生死教育不仅不会带来负面心理暗示，反而有助于青少年的心智成长，帮助其缓解对未知的焦虑并明晰个人的人生价值。</p>
+          </div> <!-- 【修正】闭合 bi-zh -->
+          <div class="bi-en">
+            <h4>IX. Youth Demographics and the Current Status of Life Education</h4>
+            <p>Macro-level data indicates that the youth demographic aged 18 to 25 accounts for a significant proportion (approximately 40%) of organ donation registrations. However, at the micro-family level, some parents maintain reservations or opposition, concerned about young people engaging with topics of mortality prematurely. The respondent stated that systematic life and death education does not induce negative psychological suggestions. Instead, it supports the cognitive development of adolescents, helping them mitigate anxiety toward the unknown and clarify personal life values.</p>
+          </div>
+        </div>
+
+        <!-- 个人感受总结 1 -->
+        <div class="interview-summary-box">
+          <div class="bi-row">
+            <div class="bi-zh">
+              <p><strong>总结</strong></p>
+              <p>· 管理层受访者的表述整体呈现出高度的系统性与制度化视角，更倾向于从宏观政策、法律合规以及社会整体效益的角度来阐述器官捐献的运作逻辑。</p>
+            </div>
+            <div class="bi-en">
+              <p><strong>SUMMARY</strong></p>
+              <p>· The management-level respondent's narrative displays a highly systematic and institutionalized perspective, tending to articulate the operational logic of organ donation through macro-level policies, legal compliance, and overall societal utility.</p>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- 【修正】闭合最外层 interview-block，防止后续受访者 2 被强制吞入 -->
+    </div> <!-- 【修正】闭合 interview-stream -->
+  </div> <!-- 【修正】闭合 container -->
+</section>
+
+<hr class="section-divider">
+<!-- ==================== 受访者 2 ==================== -->
+      <div class="interview-block">
+        <h3 class="interviewer-title">// 受访者 2：三位热线工作人员/ RESPONDENT 2: THREE HOTLINE OPERATORS</h3>
+        
+        <!-- 一、工作职责与专业背景 -->
+        <div class="bi-interview-row">
+          <div class="bi-zh">
+            <h4>一、工作职责与专业背景</h4>
+            <p>1. 工作内容是什么样的？<br>
+            A的主业是信息部门的工作人员，主要负责宣传、网站建设等工作，同时也兼职接听器官捐献热线。</p>
+            <p>2. 为什么做这个工作？<br>
+            接热线主要是轮班制，并不是A专门选择从事这项工作。A本身学习的是信息相关专业，并不是生物学或医学专业。</p>
+            <p>3. 工作量怎么平衡？<br>
+            夏天打来热线的电话比较少，而冬天明显更多，所以冬天的时候工作会特别忙。有时候甚至需要占用正常的工作时间来接电话。</p>
+          </div>
+          <div class="bi-en">
+            <h4>I. Responsibilities and Professional Background</h4>
+            <p>1. What is the nature of the job?<br>
+            A works in the information department, where the main responsibilities include publicity, website development, and other related tasks. In addition, A also answers calls on the organ donation hotline.</p>
+            <p>2. Why pursue this work?<br>
+            Answering the hotline is mainly part of a rotating shift system rather than a job A specifically chose to pursue. A’s academic background is in information-related fields, rather than biology or medicine.</p>
+            <p>3. How is the workload balanced?<br>
+            There are usually fewer calls in the summer, while the number increases significantly in the winter, making the workload much heavier. Sometimes, A has to take calls during regular working hours.</p>
+          </div>
+        </div>
+
+        <!-- 二、接线经验与应对机制 -->
+        <div class="bi-interview-row">
+          <div class="bi-zh">
+            <h4>二、接线经验与应对机制</h4>
+            <p>4. 是怎么对工作的内容怎么熟悉起来的，会不会紧张？<br>
+            刚开始接热线的时候，A也会紧张。工作人员会有一套事先准备好的prompt，需要先熟悉这些内容。但实际接电话的时候，很多情况并不会按照prompt发展。有些来电者情绪非常崩溃，需要长时间安慰；还有一些人一直在说，但很难把事情解释清楚。遇到这种情况，就需要根据实际情况灵活处理。如果遇到自己无法解决的问题，也会向负责管理热线的周老师请教。</p>
+            <p>5. 有没有什么特别深刻的经历？<br>
+            A遇到过很多让人印象深刻的电话。有些患有抑郁症的人会打来询问活体器官捐献，但根据规定，这种情况下不能同意。如果对方明确表达出想通过捐献结束生命的想法，工作人员就需要判断是否存在自杀风险，并在必要时报警。A提到，这类电话在冬天尤其多。</p>
+          </div>
+          <div class="bi-en">
+            <h4>II. Call Handling Experience and Coping Mechanisms</h4>
+            <p>4. How did you become familiar with the work, and were you nervous?<br>
+            A was nervous when first starting to answer the hotline. There is a prepared set of prompts that staff members are expected to become familiar with. However, many calls do not follow the prompts as expected. Some callers are extremely emotional and need to be comforted for a long time, while others may talk continuously without being able to explain their situation clearly. In these cases, A has to respond flexibly and provide emotional support. When something is beyond A’s ability to handle, A will also consult Ms. Zhou, who manages the hotline.</p>
+            <p>5. Are there any particularly memorable experiences?<br>
+            A has received many calls that were particularly memorable. Some people with depression have called to ask about living organ donation, but such requests cannot be approved under the relevant regulations. When callers clearly express an intention to use donation as a way to end their lives, the staff have to assess the risk and, when necessary, contact the police. A noted that these calls are especially common in the winter.</p>
+          </div>
+        </div>
+
+        <!-- 三、沟通伦理与公众认知偏误 -->
+        <div class="bi-interview-row">
+          <div class="bi-zh">
+            <h4>三、沟通伦理与公众认知偏误</h4>
+            <p>6. 接电话的时候，更需要专业性还是热情？<br>
+            A认为，工作人员不能过度共情，否则很容易被来电者的情绪影响。但有时候，尤其是在周末轮班的时候，也会遇到一些需要聊很久的人。有时一通电话就会持续两三个小时。虽然这并不完全是工作人员的职责，但有时候也只能陪着对方聊下去，因为看到有些人的生活状态确实很艰难，自己也会觉得难过。</p>
+            <p>7. 一般什么样的电话比较多？<br>
+            热线上的电话类型很多。有些人只是来询问信息，如果网站上已经有相关内容，工作人员也会再向他们解释一遍。还有一些电话是家长想帮已经年满18岁的孩子取消器官捐献登记，但如果孩子已经成年，父母就没有权利替他们做这个决定。与此同时，工作人员也很难仅凭电话确认来电者的真实身份，即使对方提供了一些身份信息，也无法完全证明他就是当事人的父母。<br>
+            还有一些来电是对机构的抱怨甚至辱骂。有些人并不了解这个机构具体负责什么，因为这个网站主要负责信息登记和对接，并不负责器官的摘取和分配。因此，当人们不了解机构的职责时，可能会因为其他问题打电话过来责骂工作人员，但实际上这些问题并不属于他们的职责范围。</p>
+            <p>8. 为什么现在有些人不愿意捐献器官？<br>
+            A认为，一个比较常见的原因是人们希望自己保持健康、完整地活着，不愿意去想死亡之后的事情。另外，父母的态度也会对一个人的捐献意愿产生很大的影响。</p>
+          </div>
+          <div class="bi-en">
+            <h4>III. Communication Ethics and Public Misconceptions</h4>
+            <p>6. Is professionalism or warmth more needed when answering calls?<br>
+            A believes that hotline workers cannot empathize too deeply, because they can easily become overwhelmed by callers’ emotions. However, especially during weekend shifts, there are sometimes callers who need to talk for a very long time. A single call may last two or three hours. Although this is not necessarily part of the workers’ formal responsibilities, sometimes A simply stays on the phone and talks with them, because it can be difficult to hear about how painful and difficult some people’s lives are.</p>
+            <p>7. What types of calls are generally most common?<br>
+            There are many different types of calls. Some people simply call to ask for information. Even when the information is already available on the website, staff will usually explain it to them again. There are also calls from parents who want to cancel their adult children’s organ donation registration. However, once a child has turned 18, the parents no longer have the legal right to make that decision on their behalf. At the same time, it is difficult for staff to verify whether the person calling is actually the parent. Even if the caller provides identification information, it does not necessarily prove their identity or relationship.<br>
+            Some callers also complain about or even verbally abuse the organization. Many people do not fully understand what the organization is responsible for. The website mainly handles registration and information coordination; it is not responsible for organ retrieval or allocation. Therefore, when people misunderstand the organization’s role, they may blame or criticize the staff for problems that are actually outside their responsibility.</p>
+            <p>8. Why are some people currently reluctant to donate organs?<br>
+            A believes that one common reason people are reluctant to donate organs is that they want to remain healthy and physically intact while they are alive, and they may not want to think about what happens after death. Parents’ attitudes can also have a significant influence on a person’s willingness to become an organ donor.</p>
+          </div>
+        </div>
+      </div>
+  <!-- ==================== 受访者 3 ==================== -->
+      <div class="interview-block">
+        <h3 class="interviewer-title">// 受访者 3：器官捐献者家属 / RESPONDENT 3: DONOR FAMILY MEMBER</h3>
+        
+        <!-- 一、背景与日常学习 -->
+        <div class="bi-interview-row">
+          <div class="bi-zh">
+            <h4>一、背景与日常学习</h4>
+            <p>1. 您可以先简单介绍一下自己吗？比如，您是从哪里来的，什么时候来到北京，以及现在主要在做什么？<br>
+            我高中毕业以后就来北京打工了。1995年开始信仰基督教。现在主要做一些宣传方面的工作。以前也做过一些公益的事情，比如帮村里修路，也一直坚持献血。2009年，我的儿子因为脑出血导致脑死亡，后来我决定捐献他的器官。</p>
+            <p>2. 除了工作之外，您平时还会花时间做些什么？这些事情对您来说有什么意义吗？<br>
+            平时除了工作，我也会自己学一些东西。我会自学中医，也会读《四书五经》。我觉得这些东西能让我多了解人的身体、生命，还有一个人应该怎么生活。</p>
+          </div>
+          <div class="bi-en">
+            <h4>I. Background and Personal Pursuits</h4>
+            <p>1. Could you briefly introduce yourself—where you are from, when you came to Beijing, and what you are mainly doing now?<br>
+            After I graduated from high school, I came to Beijing to work. I began practicing Christianity in 1995. Now I mainly do publicity-related work. In the past, I also did some things for the community, such as helping repair roads in my village, and I have continued to donate blood. In 2009, my son suffered a cerebral hemorrhage that resulted in brain death. Afterwards, I decided to donate his organs.</p>
+            <p>2. Outside of work, what do you usually spend your time doing? What do these activities mean to you?<br>
+            Outside of work, I also spend time learning things on my own. I study traditional Chinese medicine and read the Four Books and Five Classics. I think these things help me better understand the human body, life, and how a person should live.</p>
+          </div>
+        </div>
+
+        <!-- 二、捐献抉择与生命理念 -->
+        <div class="bi-interview-row">
+          <div class="bi-zh">
+            <h4>二、捐献抉择与生命理念</h4>
+            <p>3. 我知道这很难讲述，当时面对这样的情况，您为什么最后会决定捐献儿子的器官？什么样的信念让您做出了这个选择？<br>
+            我觉得这和我的基督教信仰有很大的关系。基督教讲的一个重要道理就是要向善，要帮助别人。我觉得既然自己有能力帮助别人，就应该去做。所以后来儿子的器官能够帮助其他人，我觉得这也是一种向善的方式。</p>
+            <p>4. 回头看这件事，您觉得这次经历改变了您对生命或者“帮助别人”这件事的理解吗？<br>
+            我觉得帮助别人不一定非要做什么特别大的事情。以前修路、献血，这些都是自己能做的事情。后来捐献儿子的器官，也是一样。我很爱的我的儿子，所以我想将我对他的爱带给更多人。我只是觉得，人活着的时候应该尽量帮助别人，能够给别人一点帮助，就去做一点。</p>
+          </div>
+          <div class="bi-en">
+            <h4>II. Donation Decision and Life Philosophy</h4>
+            <p>3. I know this is hard to say, but when you were faced with such a difficult situation, what ultimately led you to decide to donate your son’s organs? What beliefs guided that decision?<br>
+            I think my decision was closely connected to my Christian faith. One of the important teachings of Christianity, as I understand it, is to do good and help others. I believe that when you have the ability to help someone, you should do it. So when my son’s organs had the chance to help other people, I saw that as another way of doing good.</p>
+            <p>4. Looking back, do you think this experience changed the way you understand life or what it means to help others?<br>
+            I don't think helping others necessarily means doing something extraordinary. Helping repair roads and donating blood were both things I could do. Donating my son’s organs was the same in that sense. I love my son, and I want to spread that love to more people. I just believe that while we are alive, we should try to help others whenever we can. If we are able to make even a small difference, we should do it.</p>
+          </div>
+        </div>
+      </div>
+     <!-- ==================== 受访者 4 ==================== -->
+<section id="interview-respondent-4">
+  <div class="interview-block">
+    <h3 class="interviewer-title">// 受访者 4：前器官协调员 / RESPONDENT 2: FORMER COORDINATOR</h3>
+    
+    <!-- 一、职业生涯与行业背景 -->
+    <div class="bi-interview-row">
+      <div class="bi-zh">
+        <h4>一、职业生涯与行业背景</h4>
+        <p>· 履历与组织架构：受访者于 2016 年医院实习期间首次接触器官捐献机制。当时该院以肝胆外科二中心为核心，由移植内科与移植外科共同构成，由医务部主导政策制定与合规监督，临床病区则负责具体的捐献及移植临床操作。<br>
+        · 入行契机：受访者主动申请进入该领域，一方面是由于在护理实习过程中对传统、重复性的临床护理工作缺乏职业志趣，另一方面则是受到器官捐献这一新兴领域之挑战性、探索价值与社会意义的吸引。<br>
+        · 资质获取：于 2016 年底至 2017 年初正式转入该专业，在导师的带教下系统学习了器官捐献的法理基础、沟通话术与临床全流程，并在随后的三年多职业生涯中逐步深度参与各个实务环节。</p>
+      </div>
+      <div class="bi-en">
+        <h4>I. Professional Career and Industry Background</h4>
+        <p>· Background and Organizational Structure: The respondent first encountered the organ donation mechanism during a hospital internship in 2016. At that time, the hospital's structure centered on the Second Center of Hepatobiliary Surgery, comprised jointly of transplant internal medicine and transplant surgery. The Medical Affairs Department led policy formulation and compliance supervision, while clinical wards managed specific donation and transplantation operations.<br>
+        · Career Entry: The respondent proactively applied to enter this field, driven partly by a lack of professional interest in conventional, repetitive clinical nursing tasks during the internship, and partly by the challenging nature, exploratory value, and social significance of the emerging field of organ donation.<br>
+        · Qualification Acquisition: Officially transitioning into this specialization between late 2016 and early 2017, the respondent systematically studied the legal foundations, communication protocols, and clinical processes under a mentor's guidance, progressively participating in all practical phases over a career spanning more than three years.</p>
+      </div>
+    </div>
+
+    <!-- 二、实务操作全流程演进 -->
+    <div class="bi-interview-row">
+      <div class="bi-zh">
+        <h4>二、实务操作全流程演进</h4>
+        <p>· 潜在病例检索：器官捐献工作的首要步骤为“发现潜在病例”。协调员需要主动走访各级医疗机构（尤其是大型市级三甲医院的重症监护室），寻找因脑出血、脑肿瘤或严重外伤导致不可逆神经损伤的患者。<br>
+        · 制度探索期特征：在受访者执业早期，脑死亡尚未在国家法律层面完成单独确立，且适逢 2015 年中国全面停止使用死刑犯器官的转型节点。因此，临床上以脑死亡为基础的公民自愿捐献体系仍处于摸索推进阶段，每一次案例的实践既是医疗救治，也是对国家制度演进的现实尝试。<br>
+        · 跨院转运机制：在确认病例符合医学初筛标准并获得家属的初步知情后，鉴于器官获取对重症监护设备、维持技术及多学科专家团队的要求极高，普通基层医院无法承载，必须在确保安全的前提下将患者转运至具备特定资质的移植中心医院。<br>
+        · 脑死亡判定程序：患者进入移植中心后，需由具备法定资质的独立专业医生团队进行严苛的脑死亡判定，通过多项微观电生理及临床反射检测进行科学确证，以确保判定结论的客观性。<br>
+        · 维持与器官评估：在确认脑死亡后，患者需在 ICU 接受高效的生命支持以维持终末器官的灌注质量。团队会结合患者的基础疾病、功能状态以及是否存在特定传染病（如乙肝、丙肝等，需结合受体的个体条件进行伦理与医学权衡）进行多维度可用性评估。<br>
+        · 系统分配与社会考量：器官符合医学标准的器官将全部录入国家器官分配系统进行自动化匹配，系统核心依据医学紧急程度、组织配型相容性及年龄等客观指标在全国范围内分发。在部分特定个案中，虽然整体以医学与伦理评估为主导，但某些社会学因素（如家庭角色、职业属性等）在实务中亦可能被纳入综合考量范围。<br>
+        · 遗体善后与人文致敬：器官获取手术结束后，协调员及医疗团队会对捐献者进行妥善的遗体整理与容貌修复，协同家属完成善后处理，以给予捐献者及其家庭最高规格的人道尊严与人文关怀。</p>
+      </div>
+      <div class="bi-en">
+        <h4>II. Evolution of the Practical Operational Workflow</h4>
+        <p>· Potential Case Screening: The primary step in organ donation operations is "identifying potential cases." Coordinators proactively visit various tiers of medical institutions—specifically intensive care units in large municipal tertiary hospitals—to locate patients with irreversible neurological damage caused by cerebral hemorrhage, brain tumors, or severe trauma.<br>
+        · Characteristics of the Institutional Exploration Phase: During the respondent's early practice, brain death had not been independently established in national legislation, coinciding with the 2015 transitional juncture where China completely ceased using organs from executed prisoners. Consequently, the voluntary citizen donation system based on brain death criteria was still in an exploratory stage; each case served as both medical treatment and a practical test of national institutional evolution.<br>
+        · Inter-hospital Transfer Mechanisms: Upon verifying that a case met medical screening standards and obtaining initial family consent, the patient had to be safely transferred to a qualified transplant center hospital. This was necessary because ordinary grassroots hospitals cannot sustain the intensive care equipment, maintenance technologies, and multi-disciplinary specialist teams required for organ procurement.<br>
+        · Brain Death Determination Protocol: Upon admission to the transplant center, an independent team of legally qualified physicians conducted strict brain death determination, utilizing micro-level electrophysiological and clinical reflex tests to ensure the objectivity of the conclusion.<br>
+        · Maintenance and Organ Evaluation: Following brain death confirmation, patients received intensive life support in the ICU to maintain end-organ perfusion quality. The team conducted multi-dimensional viability assessments considering the patient's underlying conditions, functional status, and the presence of specific infectious diseases (e.g., Hepatitis B or C, balanced ethically and medically against recipient conditions).<br>
+        · System Allocation and Social Considerations: Organs meeting medical criteria were entered into the national organ allocation system for automated matching. The system distributed organs nationwide based on objective metrics such as medical urgency, histocompatibility, and age. In certain exceptional cases, while medical and ethical evaluations remained dominant, certain sociological factors (such as family roles or occupational attributes) might also be integrated into the comprehensive assessment.<br>
+        · Post-mortem Management and Humanitarian Tributes: Following procurement surgery, the coordinator and medical team performed body restoration and facial cosmetic repair, assisting the family with final arrangements to accord the donor and their family the highest level of humanitarian dignity and care.</p>
+      </div>
+    </div>
+
+    <!-- 三、执业案例统计与行业演变 -->
+    <div class="bi-interview-row">
+      <div class="bi-zh">
+        <h4>三、执业案例统计与行业演变</h4>
+        <p>· 案例转化率分析：在三年多的职业生涯中，受访者个人独立完成的成功捐献案例约为 20 例，而其接触并走访的潜在案例则高达 200 至 300 例。未能成功转化的原因主要归结为家属最终拒绝、病情未能通过严格的脑死亡医学标准，或器官功能在维持期出现不可逆衰竭。<br>
+        · 行业规范化进程：受访者于 2020 年新冠疫情后逐步离开该岗位。他指出，当前行业已向高度规范化迈进，早期盛行的跨区域协调与转运模式目前已被严格限制，各行政区域被要求必须在本地医疗体系内独立完成全流程闭环，以保障程序的透明与可控。<br>
+        · 早期工作强度：受访者回忆早期阶段工作强度极大，因潜在病例的时效性极强，协调员常需高频次跨城市奔波，在极端情况下单日需走访 5 至 6 家医疗机构进行病例筛查与科室宣讲，对体能与应变能力提出了极大挑战。</p>
+      </div>
+      <div class="bi-en">
+        <h4>III. Case Statistics and Industry Evolution</h4>
+        <p>· Case Conversion Rate Analysis: Over a career spanning more than three years, the respondent independently completed approximately 20 successful donation cases, having identified and screened between 200 and 300 potential cases. Unsuccessful conversions were primarily attributed to ultimate family refusal, failure to meet strict medical criteria for brain death, or irreversible organ failure during the maintenance period.<br>
+        · Industry Standardization Processes: The respondent gradually transitioned out of the role after the COVID-19 pandemic in 2020. He noted that the industry has shifted toward high standardization; early practices of cross-regional coordination and transfer are now strictly restricted. Administrative regions are required to complete the full workflow loop independently within local medical systems to ensure procedural transparency and control.<br>
+        · Early Work Intensity: The respondent recalled intense workloads during the early phases. Due to the highly time-sensitive nature of potential cases, coordinators frequently traveled between cities. In extreme instances, a coordinator might visit 5 to 6 medical institutions in a single day for case screening and departmental briefings, presenting significant physical and adaptive challenges.</p>
+      </div>
+    </div>
+
+    <!-- 四、典型案例的叙事与记忆 -->
+    <div class="bi-interview-row">
+      <div class="bi-zh">
+        <h4>四、典型案例的叙事与记忆</h4>
+        <p>· 案例一（家庭共识）：令其印象最深的是其执业生涯中独立完成的第一例捐献。患者为一名突发脑干出血的男性，在其配偶与年幼子女的共同决策下达成了捐献共识。尽管受限于患者终末期生理状态，最终仅有肝脏符合移植条件，但该案例的成功转化不仅延续了他人生命，也在制度框架下帮助该家庭减轻了部分沉重的医疗及善后经济负担。<br>
+        · 案例二（传统观念的突破）：另一例深刻案例发生在外地。一名未婚中年男性因意外陷入脑死亡状态，其年迈的父母表现出极高的认知水平，主动同意捐献。家属认为不应让亲人的生命在纯粹的生物学消亡中“白白结束”，并对协调员团队在整个流程中表现出的人文关怀表示高度认可。<br>
+        · 遗憾案例的常态化：受访者指出，协调工作中未能成功的遗憾案例在数量上占据绝对多数（如转运途中的病情突变、核心脏器功能衰竭等）。面对此类常态化的职业遗憾，从业者必须具备极强的心理防御机制，以理性的态度视其为实务工作的自然客观规律，避免陷入过度的主观情绪消耗。</p>
+      </div>
+      <div class="bi-en">
+        <h4>IV. Narratives and Memories of Typical Cases</h4>
+        <p>· Case One (Family Consensus): The case that left the deepest impression was the first independent donation case of his career. The patient was a male with sudden brainstem hemorrhage, and a donation consensus was reached through the joint decision of his spouse and young children. Although limited by the patient's terminal physiological status—resulting in only the liver meeting transplantation criteria—the successful conversion not only extended another life but also helped alleviate some of the family's heavy medical and post-mortem financial burdens within the institutional framework.<br>
+        · Case Two (Breaking Traditional Mindsets): Another profound case occurred in a different city. An unmarried, middle-aged male fell into brain death due to an accident, and his elderly parents exhibited a high level of understanding, proactively consenting to the donation. The family believed that their loved one's life should not "end in vain" through purely biological cessation, and expressed high appreciation for the humanitarian care demonstrated by the coordinator team throughout the entire workflow.<br>
+        · Normalization of Unsuccessful Cases: The respondent noted that unsuccessful cases involving professional regrets (e.g., sudden clinical deterioration during transfer, core organ failure, etc.) represent the absolute majority in coordination work. Facing such routinized professional setbacks, practitioners must possess robust psychological defense mechanisms to rationally view them as natural, objective laws of practical operations, thereby avoiding excessive subjective emotional exhaustion.</p>
+      </div>
+    </div>
+
+    <!-- 五、执业心理调适与“共情”边界 -->
+    <div class="bi-interview-row">
+      <div class="bi-zh">
+        <h4>五、执业心理调适与“共情”边界</h4>
+        <p>· 职业素养要求：器官捐献协调工作是一项集跨区域行政调度、复杂的医患法理沟通、高风险转运组织及临终关怀于一体的综合性岗位，对从业者的体能、心理韧性与危机处理能力有着极高的筛选门槛，导致行业整体的人员流动性显著高于普通临床岗位。<br>
+        · 理性与共情的平衡点：受访者坦言，面对临终家庭的巨大悲痛，协调员无法做到完全情感隔离，但在执业程序中必须维持高度的冷静与专业判断。行业职业培训强调“避免无效共情”，即协调员不应过度沉溺于与家属的情感共振中，而应定位为“感同身受的理性引导者”，在给予情感支撑的同时，协助家属在情绪稳定期做出理性的事实判断。<br>
+        · 职业内疚感的消解：针对“是否会因介入悲痛家庭而产生职业内疚”的疑问，受访者认为协调员的本质角色是国家政策的清晰阐释者与医疗资源的程序连接者。其存在并非为了强行改变家庭的既定意志，而是为那些本有捐献意愿但缺乏正规渠道与信息指导的家庭提供专业合法的路径支持。因此，只要严守伦理底线，该角色本质上是一种人道协助。</p>
+      </div>
+      <div class="bi-en">
+        <h4>V. Psychological Adaptation and the Boundaries of "Empathy"</h4>
+        <p>· Professional Requirement: Organ procurement coordination is a comprehensive role integrating cross-regional administrative scheduling, complex medical-legal communication, high-risk transfer organization, and end-of-life care. It presents high entry barriers for physical stamina, psychological resilience, and crisis management, resulting in an industry turnover rate significantly higher than conventional clinical positions.<br>
+        · Balancing Rationality and Empathy: The respondent stated that when confronting the profound grief of families at the end of life, coordinators cannot achieve complete emotional isolation but must maintain high levels of composure and professional judgment during procedures. Industry training emphasizes "avoiding ineffective empathy," meaning coordinators should not submerge themselves in the family's emotional distress. Instead, they should position themselves as "rationally guided facilitators," offering emotional support while assisting families in making rational, fact-based decisions during periods of emotional stability.<br>
+        · Dissolution of Professional Guilt: Addressing queries regarding whether intervening with grieving families induces professional guilt, the respondent argued that the essential role of a coordinator is that of a clear interpreter of national policy and a procedural connector of medical resources. Their presence is not intended to forcefully alter a family's established will, but to provide a professional, legal pathway for families who already possess donation intent but lack formal channels and guidance. Consequently, as long as ethical boundaries are strictly maintained, the role functions fundamentally as a form of humanitarian assistance.</p>
+      </div>
+    </div>
+
+    <!-- 六、社会学特征与技术前瞻 -->
+    <div class="bi-interview-row">
+      <div class="bi-zh">
+        <h4>六、社会学特征与技术前瞻</h4>
+        <p>· 认知受众的社会学画像：在分析何种群体更易接受器官捐献理念时，受访者指出，关键变量并非个体的性格特征，而是其受教育程度、所处的文化地缘环境及价值观构建过程。教育水平与对现代伦理的接受度呈现出显著的正相关关系。<br>
+        · 需求层次理论的映射：受访者引入马斯洛需求层次理论解释称，只有当社会个体的基本物质生存需求得到稳供满足后，其公共意识才更有可能转向对利他行为、社会责任等高层次精神价值的追寻，这也是器官捐献率随经济社会发展而逐步提升的内在逻辑。<br>
+        · 未来医疗技术的冲击：针对干细胞器官培养、基因编辑异种移植等前沿科技，受访者认为其虽然展现出巨大的应用前景，但受限于技术成熟度周期及复杂的现代伦理博弈，在可预见的相当长时期内，难以完全取代现实中的人体器官捐献。未来的供体格局更可能呈现前沿科技与传统人体自愿捐献双轨并行的态势。</p>
+      </div>
+      <div class="bi-en">
+        <h4>VI. Sociological Characteristics and Technological Forecasting</h4>
+        <p>· Sociological Profiling of Receptive Audiences: In analyzing which demographics are more receptive to organ donation concepts, the respondent indicated that the key variables are an individual's level of education, geographic cultural environment, and value-formation process, rather than specific personality traits. Education levels display a significant positive correlation with acceptance of modern ethical frameworks.<br>
+        · Mapping Maslow's Hierarchy of Needs: The respondent introduced Maslow's hierarchy of needs to explain that public consciousness is more likely to turn toward altruistic behaviors and social responsibilities only after basic material survival needs are stably met. This underlines the internal logic of organ donation rates rising progressively alongside socioeconomic development.<br>
+        · Impact of Future Medical Technologies: Regarding cutting-edge technologies like stem cell organ cultivation and gene-edited xenotransplantation, the respondent noted that while they demonstrate significant potential, they are unlikely to fully replace human organ donation in the foreseeable future due to technological maturity cycles and complex modern ethical debates. Future supply paradigms are more likely to feature a dual-track coexistence of advanced technologies and traditional voluntary human donations.</p>
+      </div>
+    </div>
+
+    <!-- 七、身体、生命与代际思考 -->
+    <div class="bi-interview-row">
+      <div class="bi-zh">
+        <h4>七、身体、生命与代际思考</h4>
+        <p>· 载体论与思想的延续性：受访者阐述了其独特的生命哲学，认为肉体本身并非生命的全部，而更接近于一种承载思想与人生价值的物质载体。个体的思想深度与成长意愿决定了其生命的实质跨度；若放弃主动思考，躯体的存续并不能延缓精神的消亡。反之，若个体的精神融入了更高的信仰或社会公共价值，即使肉体消逝，其精神层面的影响力亦可达成某种意义上的“不朽”。<br>
+        · 行为抵触的传统根源：受访者指出，虽然许多人能够在精神层面上认同为了宏大理想奉献生命，但在具体的物理身体处置上（如死后器官获取），依然会产生根深蒂固的抵触。这种知行差异深刻折射出我国正处于从传统宗族文化向现代契约社会转型的过渡阶段，具有鲜明的历史局限性与现实延续性。<br>
+        · 代际观念演进的必然性：受访者将器官移植的普及路径与我国历史上“传统土葬向现代火葬”的观念转型进行类比。老一代群体深受“身体发肤，受之父母”等传统文化形塑，观念扭转较为缓慢；而身处信息与科技高速更迭时代的现代年轻一代，随着教育的普及，对死亡、身体完整性及器官捐献的公共价值将表现出天然更高的包容度与认同感。</p>
+      </div>
+      <div class="bi-en">
+        <h4>VII. Philosophical Reflections on the Body, Life, and Generational Shifts</h4>
+        <p>· Vessel Theory and the Continuity of Thought: The respondent articulated a distinct life philosophy, viewing the physical body not as the entirety of life, but rather as a material vessel carrying thoughts and personal values. The depth of an individual's thought and capacity for growth determine the true span of their life; abandoning active thought results in spiritual cessation regardless of physical survival. Conversely, if an individual's spirit integrates into higher beliefs or public social values, their spiritual influence can achieve a form of longevity even after physical death.<br>
+        · Traditional Roots of Behavioral Resistance: The respondent noted that while many individuals can intellectually align with sacrificing their lives for grand ideals, they still experience deep-seated resistance regarding specific physical body disposal (such as post-mortem organ procurement). This divergence between knowledge and action reflects a transitional phase from a traditional clan-based culture to a modern contract-based society, carrying distinct historical limitations and contemporary continuity.<br>
+        · Inevitability of Generational Conception Shifts: The respondent drew an analogy between the adoption path of organ transplantation and China's historical transition from traditional burial to modern cremation. Older generations, heavily shaped by traditional cultural concepts such as "the body, hair, and skin are received from parents," adapt slowly. In contrast, the younger generation, immersed in rapid information and technological shifts, demonstrates naturally higher levels of tolerance and alignment with death, physical non-integrity, and the public utility of organ donation due to expanded education.</p>
+      </div>
+    </div>
+
+    <!-- 八、执业反思与个人职业认同 -->
+    <div class="bi-interview-row">
+      <div class="bi-zh">
+        <h4>八、执业反思与个人职业认同</h4>
+        <p>· 职业对人性的塑造：受访者承认该岗位对其个人性格与生命观带来了持久性的重塑。从入行初期的迷茫与对死亡的本能恐惧，到后期在处理极其复杂的临终纠纷与医疗调度中走向从容，高强度的现实考验赋予了其远超同龄人的危机处理能力与从容心态。<br>
+        · 现实主义与职业自豪感的交织：受访者坦率表明，继续留任该岗位的动力包含了职业编制、薪酬回报、出差补贴及个人晋升规划等合理的现实理性考量，而非全然依赖纯粹理想主义的“用爱发电”。但与此同时，在经历数百例案例的调度、间接拯救无数濒危受者家庭后，双盲机制下带来的职业成就感与利他自豪感，同样构成了支撑其在高强度压力下坚持下来的精神支柱。<br>
+        · 对青年的伦理建议：作为登记且从未撤销捐献意愿的践行者，受访者建议当下的年轻人面对重大的人生与伦理抉择时，无需过早急于做出终极判定。个体的价值观应随着阅历的增长而自然发育，现阶段应专注于完成当下角色所承载的学业与社会责任，学会“让子弹飞一会儿”，将重大的伦理抉择留给心智更成熟的阶段去判断。</p>
+      </div>
+      <div class="bi-en">
+        <h4>VIII. Practical Reflections and Personal Professional Identity</h4>
+        <p>· The Reshaping of Character by the Profession: The respondent acknowledged that the role brought enduring changes to his personal character and view of life. Transitioning from early career confusion and instinctive fear of death to later proficiency in managing highly complex end-of-life disputes and medical scheduling, the intense practical demands conferred crisis management capabilities and composure far exceeding his peers.<br>
+        · Intertwining of Realism and Professional Pride: The respondent stated that the motivation to remain in the role included rational, realistic considerations such as institutional enrollment, compensation, travel allowances, and personal career progression, rather than relying solely on pure idealistic devotion. However, after managing hundreds of cases and indirectly saving numerous recipient families, the professional accomplishment and altruistic pride derived under double-blind mechanisms functioned as a spiritual pillar sustaining long-term practice under high stress.<br>
+        · Ethical Recommendations for Youth: As a registered donor who has never rescinded consent, the respondent advised contemporary youth against rushing into definitive conclusions when facing major life and ethical dilemmas. Individual values should develop naturally alongside life experience; at the current stage, youth should focus on fulfilling academic and social responsibilities inherent to their immediate roles, allowing values to mature before committing to profound ethical determinations.</p>
+      </div>
+    </div>
+
+    <!-- 个人感受总结 2 -->
+    <div class="interview-summary-box">
+      <div class="bi-interview-row">
+        <div class="bi-zh">
+          <p><strong>总结</strong></p>
+          <p>· 一线从业者在选择并坚守该岗位时，往往伴随着清晰的职业生涯规划、薪酬晋升等现实利益考量，纯粹的理想主义并非唯一的驱动力，这体现了现代职业分工的理性特征。<br>
+          · 一线人员在面对密集的生死抉择与家属悲痛时，普遍呈现出高度的理性与结构化的情感克制。这种表现主要源于两方面原因：一是频繁出差、编制不足、跨部门调度等外在行政与工作强度的重压；二是专业化训练中对于“防止无效共情”以确保程序公正的刚性要求。<br>
+          · 协调员对自身的角色定位倾向于“政策的中立讲解者”与“医疗资源的连接者”。他们普遍缺乏强烈的“主观劝捐”动机，而是致力于保障信息透明，确保那些本就持有捐献意愿的社会个体的愿望能够依法、顺畅地达成。<br>
+          · 在实务访谈中，一线从业者更倾向于探讨技术合规、流程调度与职业压力等操作层面的现实问题，导致预期的深层生命伦理哲学探讨在一定程度上向临床实务层面偏离。<br>
+          · 在严格的医学与配型指标之外，现实中的器官分配与匹配体系在处理特定个案时，可能会交织并考量更为复杂的社会学与伦理学衍生变量。</p>
+        </div>
+        <div class="bi-en">
+          <p><strong>SUMMARY</strong></p>
+          <p>· Realistic Rationality in Career Choice: Frontline practitioners often maintain clear career planning, compensation, and promotion considerations when choosing and remaining in this role, indicating that pure idealism is not the sole driver. This reflects the rational characteristics of modern professional division of labor.<br>
+          · Professionalized Emotional Blunting and Defense: Frontline personnel generally display high levels of rationality and structured emotional restraint when facing dense life-and-death decisions and family grief. This manifestation stems primarily from two factors: first, external administrative and workload pressures, including frequent travel, insufficient staffing, and cross-departmental scheduling; second, rigid requirements within professional training to prevent ineffective empathy to ensure procedural justice.<br>
+          · Pure Characterization as Procedural Mediators: Coordinators tend to define their role as neutral interpreters of policy and connectors of medical resources. They generally lack strong subjective motivations to persuade donation, focusing instead on ensuring information transparency so that the wishes of individuals who already hold donor intent can be realized smoothly and legally.<br>
+          · Real-world Deviation from Ethical Dialogue: During practical interviews, frontline practitioners lean heavily toward operational issues such as technical compliance, workflow scheduling, and occupational stress, causing the anticipated deep philosophical discussions on life ethics to deviate toward clinical practical realities.<br>
+          · Complexity of Allocation Mechanisms: Beyond strict medical and matching metrics, real-world organ allocation and matching systems may intersect with and consider more complex sociological and ethical variables when handling specific individual cases.</p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+  <!-- SECTION 5: 互动留言.Comments -->
+<section id="comments" class="section">
+  <div class="section-header">
+    <span class="section-num">04 /</span>
+    <h2>留言.Leave an Echo</h2>
+  </div>
+  
+  <div class="comments-container">
+    <p class="comments-tips">看完这些关于生命、身体与制度的探讨，你有什么想法？欢迎在此留下你理性、中立的声音。</p>
+    
+    <!-- 留言输入区域 -->
+    <div class="comment-form">
+      <textarea placeholder="在此输入你的想法... / Share your thoughts here..." rows="4" class="comment-input"></textarea>
+      <div class="form-actions">
+        <button class="btn-primary">提交想法.SUBMIT</button>
+      </div>
+    </div>
+    
+    <!-- 留言展示区域（占位） -->
+    <div class="comments-list-placeholder">
+      [ 读者留言互动展示区 / Thoughts from Readers ]
+    </div>
+  </div>
+</section>
+</main>
+    
+  </body>
+  
+</html>

@@ -1,0 +1,755 @@
+/* --- 基础变量与重置 --- */
+:root {
+  --bg-color: #080808;      
+  --panel-bg: #111111;      
+  --text-main: #ffffff;     
+  --text-muted: #666666;    
+  --accent-yellow: #fcee09; 
+  --border-color: #1e1e1e;
+  
+  /* ⚡ 严格贯彻：全部更改为等线/等宽极简字体 */
+  --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-mono: monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--font-main);
+  letter-spacing: 0.5px;
+}
+
+/* --- 顶部导航栏 --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  border-bottom: 1px solid var(--border-color);
+  background: rgba(8, 8, 8, 0.95);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo { font-weight: 900; font-size: 1.1rem; letter-spacing: 2px; }
+.nav-links a { color: var(--text-muted); text-decoration: none; margin: 0 1.2rem; font-size: 0.85rem; }
+.nav-links a:hover { color: var(--accent-yellow); }
+
+.btn-secondary { background: none; border: 1px solid var(--border-color); color: var(--text-muted); padding: 0.5rem 1.2rem; font-size: 0.75rem; cursor: pointer; }
+.btn-secondary:hover { border-color: var(--text-main); color: var(--accent-yellow); }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.section { padding: 5rem 0; }
+.section-divider { border: none; border-top: 1px solid var(--border-color); margin: 2rem 0; }
+.section-header { display: flex; align-items: baseline; margin-bottom: 3rem; }
+.section-num { color: var(--text-muted); margin-right: 0.8rem; font-size: 1.1rem; font-family: var(--font-mono); }
+h2 { font-size: 1.8rem; font-weight: normal; }
+
+/* --- SECTION 1: Tab 排版 --- */
+.hero-section { display: flex; flex-direction: column; gap: 2.5rem; }
+.hero-content h1 { font-size: 2.5rem; font-weight: 400; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; }
+.tabs-container input[type="radio"] { display: none; }
+.tab-menu { display: flex; gap: 1rem; border-bottom: 1px solid var(--border-color); margin-bottom: 2rem; }
+.tab-label { padding: 0.7rem 1.5rem; color: var(--text-muted); font-size: 0.9rem; cursor: pointer; }
+#tab1:checked ~ .tab-menu .tab-label[for="tab1"],
+#tab2:checked ~ .tab-menu .tab-label[for="tab2"],
+#tab3:checked ~ .tab-menu .tab-label[for="tab3"] { color: var(--accent-yellow); background: var(--panel-bg); font-weight: bold; }
+.tab-panel { display: none; background: var(--panel-bg); padding: 2.5rem; border: 1px solid var(--border-color); }
+#tab1:checked ~ .tab-content-wrapper .panel-1,
+#tab2:checked ~ .tab-content-wrapper .panel-2,
+#tab3:checked ~ .tab-content-wrapper .panel-3 { display: block; }
+.doc-text p { font-size: 0.95rem; margin-bottom: 1.2rem; color: #dddddd; }
+.doc-text .en-doc { color: #666; font-size: 0.85rem; margin-top: 1rem; border-left: 2px solid #333; padding-left: 1rem; }
+
+/* --- ⚡ SECTION 2: 核心重构 - 超紧凑全屏词云图 --- */
+.full-page-cloud {
+  width: 100%;
+  min-height: 80vh; /* 撑满几乎一整个视窗画面 */
+  background: #0b0b0b;
+  border: 1px solid var(--border-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 采用极致密集的 Flex 矩阵包裹，实现无缝聚合的气泡紧凑感 */
+.dense-heart-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  max-width: 850px;
+  gap: 8px 14px; /* 控制词语间距，极度压缩制造紧凑感 */
+  text-align: center;
+}
+
+/* A组：可点击核心大词 */
+.word-large {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 900;
+  display: inline-block;
+  line-height: 1;
+  transition: all 0.2s ease;
+  padding: 5px 10px;
+}
+
+.word-large:hover {
+  color: var(--accent-yellow);
+  transform: scale(1.08);
+  text-shadow: 0 0 15px rgba(252, 238, 9, 0.5);
+}
+
+/* 严格按数据梯次分配尺寸 */
+.size-30 { font-size: 3.2rem; margin: -5px 10px; }
+.size-22 { font-size: 2.6rem; margin: -2px 5px; }
+.size-15 { font-size: 2.0rem; }
+.size-11 { font-size: 1.6rem; color: #dddddd; }
+.size-10 { font-size: 1.4rem; color: #cccccc; }
+.size-9  { font-size: 1.2rem; color: #aaaaaa; }
+
+/* B组：不可点击填充小词（与大词形成强烈反差，紧密挤压缝隙） */
+.word-small {
+  font-size: 0.75rem;
+  color: #2a2a2a; /* 极深灰，形成完美的背景边缘隐喻 */
+  font-weight: 400;
+  padding: 2px 4px;
+  cursor: default;
+  user-select: none;
+}
+
+/* 6个全新的巨幅独立长文界面样式 */
+.voice-extended-panes {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.full-view-pane {
+  min-height: 70vh; /* 每个文段独占一块巨幅画面 */
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--border-color);
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  transition: border-color 0.4s;
+}
+
+/* 当从词云图点击跳转过来时，卡片边缘瞬间闪烁变为高亮工业黄 */
+.full-view-pane:target {
+  border-left-color: var(--accent-yellow);
+  background: #131310;
+}
+
+.pane-inner {
+  width: 100%;
+  max-width: 800px;
+}
+
+.pane-meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-yellow);
+  margin-bottom: 1rem;
+}
+
+.full-view-pane h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #222;
+  padding-bottom: 1rem;
+}
+
+.pane-en {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  font-weight: normal;
+}
+
+.content-placeholder {
+  min-height: 200px;
+  margin-bottom: 3rem;
+}
+
+.status-tag {
+  color: #555;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.desc-hint {
+  color: #888;
+  font-size: 0.95rem;
+}
+
+.back-to-cloud {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  border: 1px solid #222;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s;
+}
+
+.back-to-cloud:hover {
+  color: var(--accent-yellow);
+  border-color: var(--accent-yellow);
+}
+
+/* --- SECTION 3 & 4 & 5 基底保护 --- */
+.abstract-pixel-art {
+  width: 100%; height: 480px; position: relative; border: 1px solid #1a1a1a;
+  background: radial-gradient(circle at 50% 75%, rgba(255,255,255,0.75) 0%, transparent 45%), linear-gradient(135deg, #000 15%, #3c3c3c 45%, #777 55%, #000 85%), radial-gradient(circle at 25% 25%, #222 0%, transparent 50%);
+  background-blend-mode: multiply, screen;
+}
+.abstract-pixel-art.vision-spec { height: 350px; background: linear-gradient(45deg, #080808 20%, transparent 25%) -30px 0, radial-gradient(circle at 70% 30%, #fff 0%, #333 40%, #080808 80%); }
+.dither-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(rgba(0,0,0,0.95) 18%, transparent 22%), radial-gradient(rgba(0,0,0,0.95) 18%, transparent 22%); background-size: 4px 4px; background-position: 0 0, 2px 2px; pointer-events: none; }
+.crosshair { position: absolute; color: #444; font-family: var(--font-mono); font-size: 14px; }
+.tl { top: 4px; left: 8px; } .tr { top: 4px; right: 8px; } .bl { bottom: 4px; left: 8px; } .br { bottom: 4px; right: 8px; }
+.vision-display { display: flex; justify-content: center; } .vision-box { width: 100%; } .vision-box caption { display: block; text-align: left; margin-top: 0.8rem; color: var(--text-muted); font-size: 0.75rem; }
+.article-item { padding: 1.5rem 0; } .article-item .date { color: var(--accent-yellow); font-family: var(--font-mono); font-size: 0.75rem; } .article-item h3 { font-size: 1.4rem; font-weight: normal; margin-top: 0.4rem; } .article-item .en-title { color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.8rem; } .article-item .desc { color: #888; font-size: 0.85rem; margin-bottom: 1.2rem; } .read-more { color: var(--text-main); text-decoration: none; font-size: 0.8rem; font-weight: bold; }
+.interview-container { background: var(--panel-bg); border: 1px solid var(--border-color); padding: 3rem; } .interview-block .badge { background: var(--accent-yellow); color: #000; display: inline-block; padding: 0.15rem 0.5rem; font-size: 0.7rem; font-weight: bold; margin-bottom: 1rem; } .interview-block h3 { font-size: 1.6rem; font-weight: normal; } .interview-block .subtitle { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem; } .interview-block .desc { color: #888; font-size: 0.85rem; margin-bottom: 2rem; }
+
+/* 响应式适配 */
+@media (max-width: 768px) {
+  .navbar { padding: 1rem; flex-direction: column; gap: 0.8rem; }
+  .full-page-cloud { min-height: 60vh; padding: 2rem 1rem; }
+  .size-30 { font-size: 2.2rem; }
+  .size-22 { font-size: 1.8rem; }
+  .full-view-pane { padding: 2rem; }
+  .full-view-pane h2 { font-size: 1.8rem; }
+}
+/* ==========================================================================
+   ⚡ ARTICLE SECTION CODE: 学术双语等线体镜像布局样式
+   ========================================================================== */
+
+.academic-paper {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  padding: 4rem;
+  border-radius: 2px;
+  margin-top: 1.5rem;
+}
+
+/* 论文头部 */
+.paper-header {
+  border-bottom: 2px solid #222;
+  padding-bottom: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.paper-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-yellow);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.paper-main-title {
+  font-size: 2.2rem;
+  font-weight: normal;
+  color: var(--text-main);
+  margin-bottom: 0.3rem;
+  letter-spacing: 1px;
+}
+
+.paper-sub-title {
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+}
+
+.paper-meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #444;
+}
+
+/* 双语流动网格系统 */
+.bilingual-stream {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.bi-row {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* 中英比例，给长文更充裕的宽度 */
+  gap: 3.5rem;
+  align-items: start;
+  border-bottom: 1px dashed #161616;
+  padding-bottom: 2rem;
+}
+
+/* 中文栏：待填写样式 */
+.bi-zh {
+  color: #555;
+  font-size: 0.9rem;
+  font-family: var(--font-mono);
+  font-style: italic;
+  letter-spacing: 1px;
+  padding-top: 2px;
+}
+
+/* 英文栏：绝对等线无衬线排版 */
+.bi-en {
+  color: #c8c8c8;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  text-align: justify;
+  font-family: var(--font-main); /* 强制继承等线无衬线系统 */
+}
+
+/* 学术小标题 */
+.bi-section-heading {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3.5rem;
+  margin: 2.5rem 0 1rem 0;
+  padding: 0.6rem 0;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+  background: #141414;
+}
+
+.heading-zh {
+  font-size: 0.95rem;
+  color: var(--accent-yellow);
+  font-weight: bold;
+}
+
+.heading-en {
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* 学术高亮引用块 */
+.paper-quote {
+  border-left: 3px solid var(--accent-yellow);
+  padding-left: 1.2rem;
+  margin: 1rem 0;
+  color: #aaaaaa;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  background: #181818;
+  padding: 1rem;
+}
+
+/* 局部响应式处理 */
+@media (max-width: 900px) {
+  .academic-paper {
+    padding: 2rem 1.5rem;
+  }
+  .bi-row, .bi-section-heading {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .bi-zh {
+    border-bottom: 1px solid #1c1c1c;
+    padding-bottom: 0.5rem;
+  }
+  .paper-main-title {
+    font-size: 1.6rem;
+  }
+}
+.academic-paper {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  padding: 3rem;
+  margin-top: 1.5rem;
+}
+
+.bilingual-stream {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.bi-row {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.bi-zh {
+  color: #555;
+  font-size: 0.95rem;
+  font-family: var(--font-mono);
+  letter-spacing: 0.5px;
+  line-height: 1.7;
+}
+
+.bi-en {
+  color: #c8c8c8;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  text-align: justify;
+  font-family: var(--font-main);
+}
+
+@media (max-width: 900px) {
+  .academic-paper {
+    padding: 1.5rem;
+  }
+  .bi-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .bi-zh {
+    border-bottom: 1px dashed #222;
+    padding-bottom: 0.8rem;
+  }
+}
+
+/* 脚注与参考文献样式 */
+.paper-footnotes {
+  margin-top: 3rem;
+  padding-top: 1rem;
+}
+
+.footnote-line {
+  width: 100px;
+  border: none;
+  border-top: 1px solid #444;
+  margin: 0 0 1rem 0;
+}
+
+.footnote-item {
+  font-size: 0.8rem;
+  color: #777;
+  line-height: 1.5;
+  margin-bottom: 0.4rem;
+  font-family: var(--font-main);
+}
+
+.paper-references {
+  margin-top: 4rem;
+  border-top: 1px solid #222;
+  padding-top: 2rem;
+}
+
+.ref-title {
+  font-size: 1.1rem;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+  font-family: var(--font-main);
+  letter-spacing: 0.5px;
+}
+
+.ref-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.ref-list li {
+  font-size: 0.85rem;
+  color: #999;
+  line-height: 1.6;
+  text-indent: -2em;
+  padding-left: 2em;
+  text-align: justify;
+  font-family: var(--font-main);
+}
+
+/* 脚注专用样式 */
+.paper-footnotes {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: none;
+}
+
+.footnote-line {
+  width: 150px;
+  border: none;
+  border-top: 1px solid #444;
+  margin: 0 0 1.5rem 0;
+}
+
+.footnote-item {
+  font-size: 0.82rem;
+  color: #888;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-align: justify;
+  font-family: var(--font-main); /* 继承无衬线等线体 */
+}
+
+.footnote-item sup {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-right: 0.3rem;
+  vertical-align: super;
+}
+
+.footnote-item i {
+  font-style: italic;
+}
+/* 封面/主页专用样式 */
+.home-cover {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.cover-content {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cover-meta {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.85rem;
+  color: #666;
+  letter-spacing: 0.2em;
+  margin-bottom: 1.5rem;
+}
+
+.cover-title {
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 4px;
+  margin-bottom: 1rem;
+}
+
+.cover-title .dot {
+  color: #ff3e3e; /* 极简的警示红点 */
+}
+
+.cover-subtitle {
+  font-size: 1.1rem;
+  color: #999;
+  letter-spacing: 1px;
+  margin-bottom: 3rem;
+  font-weight: 300;
+}
+
+.cover-pixel-wrapper {
+  width: 100%;
+  max-width: 500px;
+  height: 180px;
+  margin-bottom: 4rem;
+}
+
+.cover-spec {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #111 25%, #1a1a1a 25%, #1a1a1a 50%, #111 50%, #111 75%, #1a1a1a 75%, #1a1a1a 100%);
+  background-size: 40px 40px;
+  position: relative;
+  border: 1px solid #222;
+}
+
+.scroll-hint {
+  margin-top: 2rem;
+}
+
+.scroll-link {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.9rem;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #333;
+  padding: 0.75rem 2rem;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.scroll-link:hover {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+}
+
+.scroll-link .arrow {
+  margin-left: 0.5rem;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.scroll-link:hover .arrow {
+  transform: translateY(4px);
+}
+
+.footnote-item {
+  margin-bottom: 1.5rem; /* 让每个脚注之间有足够的间距 */
+  position: relative;
+}
+
+.fn-zh {
+  color: #e0e0e0; /* 中文字体颜色 */
+  margin-bottom: 0.25rem;
+}
+
+.fn-en {
+  color: #999999; /* 英文字体颜色稍微淡化，形成主次感 */
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+#comments {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.comments-tips {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.comment-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid #333;
+  color: #fff;
+  padding: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.comment-input:focus {
+  border-color: #666;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-primary {
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.85rem;
+  transition: opacity 0.3s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.comments-list-placeholder {
+  border-top: 1px dashed #333;
+  padding-top: 2rem;
+  color: #555;
+  text-align: center;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   ⚡ 全局双语颜色重构：中文高亮(白) / 英文置底(灰)
+   ========================================================================== */
+
+/* 1. 全局中文栏：打破原本的暗灰与斜体，变更为现代高亮等线体 */
+.bi-zh {
+  color: #ffffff !important;        /* 全局中文强制点亮为纯白 */
+  font-size: 0.95rem;
+  font-family: var(--font-main);    /* 贯彻等线无衬线系统 */
+  font-style: normal !important;    /* 移除斜体，确保学术严肃感与清晰度 */
+  letter-spacing: 0.5px;
+  line-height: 1.7;
+}
+
+/* 2. 全局英文栏：统一降级为克制的暗灰色，作为弱化背景译文 */
+.bi-en {
+  color: #666666 !important;        /* 全局英文统一压低为深灰 */
+  font-size: 0.92rem;
+  line-height: 1.7;
+  text-align: justify;
+  font-family: var(--font-main);    /* 严格继承等线系统 */
+}
+
+/* 3. 特殊学术高亮引用块 (Paper Quote) 内部的中英颜色同步纠正 */
+.paper-quote {
+  border-left: 3px solid var(--accent-yellow);
+  background: #141414;
+  padding: 1.2rem;
+  margin: 1.5rem 0;
+}
+.paper-quote .bi-zh { color: #ffffff !important; }
+.paper-quote .bi-en { color: #666666 !important; }
+
+/* 4. 底部脚注 (Footnotes) 区域中英颜色同步贯彻 */
+.footnote-item {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px dashed #161616;
+  padding-bottom: 0.8rem;
+}
+.footnote-item .fn-zh {
+  color: #ffffff !important;        /* 脚注中文高亮 */
+}
+.footnote-item .fn-en {
+  color: #666666 !important;        /* 脚注英文淡化 */
+  font-size: 0.85rem;
+}
+
+/* 5. 网页底部留言互动板块 (Comments) 提示文本对齐次要色 */
+.comments-tips {
+  color: #888888;
+}
+
+/* 6. 双语流动网格行底纹微调：提供微弱的块状保护，防止文字在复杂渐变背景上被吞 */
+.bi-row, .bi-interview-row {
+  background: rgba(8, 8, 8, 0.4);   /* 极薄的暗色托底 */
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px dashed #1a1a1a !important;
+  transition: background 0.3s ease;
+}
+
+.bi-row:hover, .bi-interview-row:hover {
+  background: rgba(15, 15, 15, 0.6); /* 鼠标悬停时轻微亮起，增强可读聚焦感 */
+}
